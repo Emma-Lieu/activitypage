@@ -27,18 +27,30 @@
   
   /* Centered Search Bar */
   .search-bar {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+    max-width: 300px;
+    width: 80%;
   }
   
   .search-bar input {
-    width: 80%;
-    max-width: 300px;
-    padding: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ddd;
+    border: none;
     outline: none;
+    background: transparent;
+    padding: 0.5rem;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .search-icon {
+    color: white;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
   }
   
   /* Menu links */
