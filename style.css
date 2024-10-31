@@ -126,16 +126,42 @@
     background-color: #555;
   }
 
-  /* Placeholder sections for content */
-  section {
-    padding: 4rem 2rem;
-    min-height: 100vh;
-    background-color: #f2f4f7;
-    border-bottom: 1px solid #ddd;
+ /* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/29128018/pexels-photo-29128018/free-photo-of-scenic-mountain-landscape-of-lofoten-islands.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
-  section h2 {
-    font-size: 2rem;
+  .hero-overlay {
+    background: rgba(255, 255, 255, 0.8); /* White with semi-transparency */
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 5rem;
     color: #333;
   }
+
+  /* Photo Credit Styling */
+.photo-credit {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  max-width: 90%;
+}
+  
+  /* Placeholder sections for content */
   
