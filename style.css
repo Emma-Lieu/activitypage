@@ -1,295 +1,312 @@
 
 *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: Arial, sans-serif;
-}
-
-/* Sticky Navbar */
-.navbar {
-position: sticky;
-top: 0;
-background-color: #333;
-color: white;
-display: flex;
-align-items: center;
-justify-content: space-between;
-padding: 1rem 2rem;
-z-index: 1000;
-flex-wrap: nowrap;
-}
-
-/* Logo */
-.logo h1 {
-color: #ffcc00; 
-font-size: 1.5rem;
-font-weight: bold;
-margin-right: auto;
-}
-
-/* Centered Search Bar */
-.search-bar {
-display: flex;
-align-items: center;
-border-bottom: 2px solid white;
-padding-bottom: 3px;
-max-width: 400px;
-width: 100%;
-justify-content: center;
-}
-.search-container {
-display: flex;
-align-items: center;
-}
-
-.search-icon {
-width: 30px; 
-height: 30px; 
-margin-right: 8px; 
-}
-
-.search-input {
-border: none; 
-border-bottom: 2px solid white; 
-padding: 8px; 
-background-color: transparent; 
-color: white; 
-outline: none; 
-width: 400px; 
-}
-
-/* hover effect */
-.search-input:focus {
-border-bottom: 2px solid lightgray; 
-}  
-
-/* Right Menu for Dropdowns */
-.right-menu {
-display: flex;
-align-items: center;
-gap: 1rem; 
-flex-wrap: nowrap;
-}
-
-/* Dropdown Styling */
-.dropdown {
-position: relative;
-display: inline-block;
-}
-
-.menu-button {
-background-color: #333;
-color: white;
-padding: 0.75rem 1.5rem;
-font-size: 1.25rem; 
-border: none;
-cursor: pointer;
-border-radius: 4px;
-display: inline-block;
-flex-wrap: nowrap;
-}
-
-.menu-button:hover {
-background-color: #555;
-}
-
-/* Hide the checkbox but keep it as a toggle control */
-.dropdown-toggle {
-display: none;
-}
-
-/* Dropdown Content Styling */
-.dropdown-content {
-display: none;
-position: absolute;
-top: 100%;
-right: 0; 
-background-color: #333;
-min-width: 200px;
-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-z-index: 1;
-border-radius: 4px;
-}
-
-/* Show dropdown content when radiobutton is checked */
-.dropdown-toggle:checked + .menu-button + .dropdown-content {
-display: block;
-}
-
-/* Dropdown link styling */
-.dropdown-content a {
-color: white;
-padding: 0.75rem 1.5rem;
-text-decoration: none;
-display: block;
-font-size: 1rem;
-}
-
-.dropdown-content a:hover {
-background-color: #555;
-}
-
-html {
-scroll-behavior: smooth;
-}  
-
-/* Hero Section */
-.hero {
-position: relative;
-width: 100%;
-height: 100vh;
-background: url('https://images.pexels.com/photos/29128018/pexels-photo-29128018/free-photo-of-scenic-mountain-landscape-of-lofoten-islands.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat;
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-.hero-overlay {
-background: rgba(255, 255, 255, 0.8); 
-padding: 2rem 3rem;
-border-radius: 0.5rem;
-text-align: center;
-}
-
-.hero-overlay h1 {
-font-size: 5rem;
-color: #333;
-}
-
-/* Transition Effect */
-.hero-exit {
-opacity: 0;
-transform: translateY(-30%);
-}
-
-/* Photo Credit Styling */
-.photo-credit {
-position: absolute;
-bottom: 1rem;
-right: 1rem;
-background: rgba(0, 0, 0, 0.5);
-color: #fff;
-padding: 0.5rem 1rem;
-font-size: 0.875rem;
-border-radius: 0.5rem;
-text-align: center;
-max-width: 90%;
-}
-
-/* Football Section */
-.activity.football {
-position: relative;
-width: 100%;
-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 2rem;
-background-color: #21212a;
-}
-
-.football-content {
-display: flex;
-max-width: 1200px;
-width: 100%;
-justify-content: space-between;
-align-items: center;
-gap: 2rem;
-flex-wrap: wrap;
-}
-
-/* Styling for the info box */
-.info-box {
-background: rgba(255, 255, 255, 0.9);
-color: #333;
-padding: 2rem;
-border-radius: 1rem;
-width: 50%;
-box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
-position: relative;
-line-height: 1.9;
-font-size: 1.2rem;
-flex-wrap: wrap;
-}
-
-/* Hide the checkbox */
-.toggle-checkbox {
-display: none;
-}
-
-/* Style the "Read More" label */
-.read-more-label {
-display: inline-block;
-margin-top: 1rem;
-padding: 0.5rem 1rem;
-background-color: #ffcc00;
-color: white;
-border: none;
-border-radius: 0.5rem;
-cursor: pointer;
-transition: background-color 0.3s;
-}
-
-.read-more-label:hover {
-background-color: #be9904;
-}
-
-/* Hidden content by default */
-.more-info {
-display: none;
-margin-top: 1rem;
-font-size: 1.1rem;
-color: #555;
-}
-
-/* Show the hidden content when checkbox is checked */
-.toggle-checkbox:checked ~ .more-info {
-display: block;
-}
-
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+    
+    /* Sticky Navbar */
+    .navbar {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    flex-wrap: nowrap;
+    }
+    
+    /* Logo */
+    .logo h1 {
+    color: #ffcc00; 
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-right: auto;
+    }
+    
+    /* Centered Search Bar */
+    .search-bar {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+    max-width: 400px;
+    width: 100%;
+    justify-content: center;
+    }
+    .search-container {
+    display: flex;
+    align-items: center;
+    }
+    
+    .search-icon {
+    width: 30px; 
+    height: 30px; 
+    margin-right: 8px; 
+    }
+    
+    .search-input {
+    border: none; 
+    border-bottom: 2px solid white; 
+    padding: 8px; 
+    background-color: transparent; 
+    color: white; 
+    outline: none; 
+    width: 400px; 
+    }
+    
+    /* hover effect */
+    .search-input:focus {
+    border-bottom: 2px solid lightgray; 
+    }  
+    
+    /* Right Menu for Dropdowns */
+    .right-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+    flex-wrap: nowrap;
+    }
+    
+    /* Dropdown Styling */
+    .dropdown {
+    position: relative;
+    display: inline-block;
+    }
+    
+    .menu-button {
+    background-color: #333;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem; 
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    display: inline-block;
+    flex-wrap: nowrap;
+    }
+    
+    .menu-button:hover {
+    background-color: #555;
+    }
+    
+    /* Hide the checkbox but keep it as a toggle control */
+    .dropdown-toggle {
+    display: none;
+    }
+    
+    /* Dropdown Content Styling */
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0; 
+    background-color: #333;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 4px;
+    }
+    
+    /* Show dropdown content when radiobutton is checked */
+    .dropdown-toggle:checked + .menu-button + .dropdown-content {
+    display: block;
+    }
+    
+    /* Dropdown link styling */
+    .dropdown-content a {
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+    }
+    
+    .dropdown-content a:hover {
+    background-color: #555;
+    }
+    
+    html {
+    scroll-behavior: smooth;
+    }  
+    
+    /* Hero Section */
+    .hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('https://images.pexels.com/photos/29128018/pexels-photo-29128018/free-photo-of-scenic-mountain-landscape-of-lofoten-islands.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    .hero-overlay {
+    background: rgba(255, 255, 255, 0.8); 
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    }
+    
+    .hero-overlay h1 {
+    font-size: 5rem;
+    color: #333;
+    }
+    
+    /* Transition Effect */
+    .hero-exit {
+    opacity: 0;
+    transform: translateY(-30%);
+    }
+    
+    /* Photo Credit Styling */
+    .photo-credit {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    max-width: 90%;
+    }
+    
+    /* Football Section */
+    .activity.football {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #21212a;
+    }
+    
+    .football-content {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    }
+    
+    /* Styling for the info box */
+    .info-box {
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 2rem;
+    border-radius: 1rem;
+    width: 50%;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
+    position: relative;
+    line-height: 1.9;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+    }
+    
+    /* Hide the checkbox */
+    .toggle-checkbox {
+    display: none;
+    }
+    
+    /* Style the "Read More" label */
+    .read-more-label {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    }
+    
+    .read-more-label:hover {
+    background-color: #be9904;
+    }
+    
+    /* Hidden content by default */
+    .more-info {
+    display: none;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: #555;
+    }
+    
+    /* Show the hidden content when checkbox is checked */
+    .toggle-checkbox:checked ~ .more-info {
+    display: block;
+    }
+    
+    
+    /* Football Images */
 .football-images {
-position: absolute;
-right: 2.5cm; 
-top: 50%;
-transform: translateY(-50%); 
-display: flex;
-flex-direction: column;
-gap: 1.5rem;
-flex-wrap: wrap;
-}  
+    position: relative; /* Relative positioning for alignment */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
 
+/* Image Container */
 .football-image-container {
-position: relative;
-max-width: 38rem;
-width: 100%;
-border-radius: 1rem;
-overflow: hidden;
-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-flex-wrap: wrap;
+    position: relative; /* Ensure relative positioning for absolute child */
+    max-width: 38rem;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .football-images img {
-width: 100%;
-height: auto;
-transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
 }
 
 .football-images img:hover {
-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* Photo Credit Styling for Individual Images */
 .football-image-container .photo-credit {
-position: absolute;
-bottom: 0.5rem;
-right: 0.5rem;
-background: rgba(0, 0, 0, 0.6);
-color: #fff;
-padding: 0.25rem 0.5rem;
-font-size: 0.75rem;
-border-radius: 0.25rem;
-text-align: right;
-flex-wrap: wrap;
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 0.25rem;
+    text-align: right;
 }
+
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .football-content {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      
+        .info-box {
+          width: 100%;
+        }
+      
+        .football-images {
+          width: 100%;
+        }
+      
+        .football-image-container {
+          width: 100%;
+        }
+      }
