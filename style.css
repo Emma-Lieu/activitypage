@@ -1,141 +1,114 @@
 
-*{
+/* Global Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    }
-    
-    /* Sticky Navbar */
-    .navbar {
+}
+
+/* Root Colors for Consistency */
+:root {
+    --primary-color: #ffcc00;
+    --secondary-color: #333;
+    --overlay-color: rgba(0, 0, 0, 0.6);
+    --text-color: white;
+}
+
+/* Navbar Styling */
+.navbar {
     position: sticky;
     top: 0;
-    background-color: #333;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
     z-index: 1000;
-    flex-wrap: nowrap;
-    }
-    
-    /* Logo */
-    .logo h1 {
-    color: #ffcc00; 
+}
+
+/* Logo */
+.logo h1 {
+    color: var(--primary-color);
     font-size: 1.5rem;
     font-weight: bold;
-    margin-right: auto;
-    }
-    
-    /* Centered Search Bar */
-    .search-bar {
+}
+
+/* Search Bar Styling */
+.search-container {
     display: flex;
     align-items: center;
-    border-bottom: 2px solid white;
-    padding-bottom: 3px;
-    max-width: 400px;
-    width: 100%;
-    justify-content: center;
-    }
-    .search-container {
+    border-bottom: 2px solid var(--text-color);
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    outline: none;
+    padding: 8px;
+    width: 200px;
+}
+
+/* Right Menu Dropdown Styling */
+.right-menu {
     display: flex;
-    align-items: center;
-    }
-    
-    .search-icon {
-    width: 30px; 
-    height: 30px; 
-    margin-right: 8px; 
-    }
-    
-    .search-input {
-    border: none; 
-    border-bottom: 2px solid white; 
-    padding: 8px; 
-    background-color: transparent; 
-    color: white; 
-    outline: none; 
-    width: 400px; 
-    }
-    
-    /* hover effect */
-    .search-input:focus {
-    border-bottom: 2px solid lightgray; 
-    }  
-    
-    /* Right Menu for Dropdowns */
-    .right-menu {
-    display: flex;
-    align-items: center;
-    gap: 1rem; 
-    flex-wrap: nowrap;
-    }
-    
-    /* Dropdown Styling */
-    .dropdown {
+    gap: 1rem;
+}
+
+.dropdown {
     position: relative;
-    display: inline-block;
-    }
-    
-    .menu-button {
-    background-color: #333;
-    color: white;
-    padding: 0.75rem 1.5rem;
-    font-size: 1.25rem; 
+}
+
+.menu-button {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
     border: none;
     cursor: pointer;
     border-radius: 4px;
-    display: inline-block;
-    flex-wrap: nowrap;
-    }
-    
-    .menu-button:hover {
+    transition: background-color 0.3s;
+}
+
+.menu-button:hover {
     background-color: #555;
-    }
-    
-    /* Hide the checkbox but keep it as a toggle control */
-    .dropdown-toggle {
-    display: none;
-    }
-    
-    /* Dropdown Content Styling */
-    .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
-    right: 0; 
-    background-color: #333;
+    right: 0;
+    background-color: var(--secondary-color);
     min-width: 200px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
     border-radius: 4px;
-    }
-    
-    /* Show dropdown content when radiobutton is checked */
-    .dropdown-toggle:checked + .menu-button + .dropdown-content {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-toggle:checked + .menu-button + .dropdown-content {
     display: block;
-    }
-    
-    /* Dropdown link styling */
-    .dropdown-content a {
-    color: white;
-    padding: 0.75rem 1.5rem;
+}
+
+.dropdown-content a {
+    color: var(--text-color);
+    padding: 0.5rem 1rem;
     text-decoration: none;
     display: block;
-    font-size: 1rem;
-    }
-    
-    .dropdown-content a:hover {
+}
+
+.dropdown-content a:hover {
     background-color: #555;
-    }
-    
-    html {
-    scroll-behavior: smooth;
-    }  
-    
-    /* Hero Section */
-    .hero {
+}
+
+/* Hero Section with Parallax Effect */
+.hero {
     position: relative;
     width: 100%;
     height: 100vh;
@@ -143,126 +116,91 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    }
-    
-    .hero-overlay {
-    background: rgba(255, 255, 255, 0.8); 
-    padding: 2rem 3rem;
-    border-radius: 0.5rem;
+    color: var(--text-color);
     text-align: center;
-    }
-    
-    .hero-overlay h1 {
-    font-size: 5rem;
-    color: #333;
-    }
-    
-    /* Transition Effect */
-    .hero-exit {
-    opacity: 0;
-    transform: translateY(-30%);
-    }
-    
-    /* Photo Credit Styling */
-    .photo-credit {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    overflow: hidden;
+}
+
+.hero-overlay {
     background: rgba(0, 0, 0, 0.5);
-    color: #fff;
+    padding: 2rem 3rem;
+    border-radius: 8px;
+}
+
+.hero-overlay h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.photo-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--overlay-color);
+    color: var(--text-color);
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    max-width: 90%;
-    }
-    
-    /* Football Section */
-    .activity.football {
-    position: relative;
-    width: 100%;
-    height: 100vh;
+    border-radius: 4px;
+}
+
+/* Activity Section Styling */
+.activity-football, .activity-volleyball {
+    padding: 4rem 2rem;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 2rem;
     background-color: #21212a;
-    }
-    
-    .football-content {
-    display: flex;
-    max-width: 1200px;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    gap: 2rem;
+    color: var(--text-color);
     flex-wrap: wrap;
-    }
-    
-    /* Styling for the info box */
-    .info-box {
+    gap: 2rem;
+}
+
+/* Info Box */
+.info-box {
     background: rgba(255, 255, 255, 0.9);
     color: #333;
     padding: 2rem;
-    border-radius: 1rem;
-    width: 50%;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.2);
-    position: relative;
-    line-height: 1.9;
-    font-size: 1.2rem;
-    flex-wrap: wrap;
-    }
-    
-    /* Hide the checkbox */
-    .toggle-checkbox {
-    display: none;
-    }
-    
-    /* Style the "Read More" label */
-    .read-more-label {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    line-height: 1.6;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+}
+
+.read-more-label {
     display: inline-block;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: #ffcc00;
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: #333;
+    border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
-    }
-    
-    .read-more-label:hover {
-    background-color: #be9904;
-    }
-    
-    /* Hidden content by default */
-    .more-info {
+}
+
+.read-more-label:hover {
+    background-color: #e6b800;
+}
+
+.more-info {
     display: none;
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    color: #555;
-    }
-    
-    /* Show the hidden content when checkbox is checked */
-    .toggle-checkbox:checked ~ .more-info {
+}
+
+.toggle-checkbox:checked ~ .more-info {
     display: block;
-    }
-    
-    
-    /* Football Images */
+}
+
+/* Football Images */
 .football-images {
-    position: relative; /* Relative positioning for alignment */
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
+    max-width: 600px;
 }
 
-/* Image Container */
 .football-image-container {
-    position: relative; /* Ensure relative positioning for absolute child */
-    max-width: 38rem;
-    width: 100%;
-    border-radius: 1rem;
+    position: relative;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
@@ -277,36 +215,32 @@
     transform: scale(1.05);
 }
 
-/* Photo Credit Styling for Individual Images */
 .football-image-container .photo-credit {
     position: absolute;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
+    bottom: 5px;
+    right: 5px;
+    background: var(--overlay-color);
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
-    border-radius: 0.25rem;
-    text-align: right;
+    border-radius: 4px;
 }
 
-    
-    /* Responsive adjustments */
-    @media (max-width: 768px) {
-        .football-content {
-          flex-direction: column;
-          align-items: stretch;
-        }
-      
-        .info-box {
-          width: 100%;
-        }
-      
-        .football-images {
-          width: 100%;
-        }
-      
-        .football-image-container {
-          width: 100%;
-        }
-      }
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-overlay h1 {
+        font-size: 3rem;
+    }
+
+    .search-input {
+        width: 100%;
+    }
+
+    .info-box, .football-images {
+        max-width: 100%;
+    }
+}
