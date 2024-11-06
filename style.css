@@ -35,28 +35,6 @@
     font-weight: bold;
 }
 
-/* Search Bar Styling */
-.search-container {
-    display: flex;
-    align-items: center;
-    border-bottom: 2px solid var(--text-color);
-}
-
-.search-icon {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-}
-
-.search-input {
-    border: none;
-    background: transparent;
-    color: var(--text-color);
-    outline: none;
-    padding: 8px;
-    width: 200px;
-}
-
 /* Right Menu Dropdown Styling */
 .right-menu {
     display: flex;
