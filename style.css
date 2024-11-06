@@ -187,8 +187,12 @@
     display: none;
 }
 
-/* Show hidden content on Check*/
+/* Football Section - Show hidden content on Check*/
 .toggle-checkbox:checked ~ .more-info {
+    display: block;
+}
+/* Volleyball Section - Show hidden content on Check */
+#toggle-more-info-volleyball:checked ~ .more-info {
     display: block;
 }
 
@@ -200,8 +204,8 @@
     display: none;
 }
 
-/* Football Images */
-.football-images {
+/* Activity Images */
+.football-images, .volleyball-images {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -209,24 +213,24 @@
     max-width: 600px;
 }
 
-.football-image-container {
+.football-image-container, .volleyball-image-container{
     position: relative;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.football-images img {
+.football-images img, .volleyball-images img{
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
 
-.football-images img:hover {
+.football-images img:hover, .volleyball-images img:hover{
     transform: scale(1.05);
 }
 
-.football-image-container .photo-credit {
+.football-image-container .photo-credit, .volleyball-image-container .photo-credit{
     position: absolute;
     bottom: 5px;
     right: 5px;
@@ -251,7 +255,7 @@
         width: 100%;
     }
 
-    .info-box, .football-images {
+    .info-box, .football-images, .volleyball-images {
         max-width: 100%;
     }
 }
