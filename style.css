@@ -179,6 +179,42 @@
     gap: 2rem;
 }
 
+/* Activity Images */
+.football-images, .volleyball-images, .sjakk-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 750px;
+}
+
+.football-image-container, .volleyball-image-container, .sjakk-image-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.football-images img, .volleyball-images img, .sjakk-images img{
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover{
+    transform: scale(1.05);
+}
+
+.football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: var(--overlay-color);
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 4px;
+}
+
 /* Info Box */
 .info-box {
     background: rgba(255, 255, 255, 0.9);
@@ -239,42 +275,6 @@
 
 .more-info {
     display: none;
-}
-
-/* Activity Images */
-.football-images, .volleyball-images, .sjakk-images {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    width: 100%;
-    max-width: 750px;
-}
-
-.football-image-container, .volleyball-image-container, .sjakk-image-container {
-    position: relative;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-
-.football-images img, .volleyball-images img, .sjakk-images img{
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
-}
-
-.football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover{
-    transform: scale(1.05);
-}
-
-.football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit{
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    background: var(--overlay-color);
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-    border-radius: 4px;
 }
 
 /* Responsive Styles for Smaller Screens */
