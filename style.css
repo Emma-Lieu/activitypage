@@ -169,7 +169,7 @@
 }
 
 /* Activity Section Styling */
-.activity-football, .activity-volleyball {
+.activity-football, .activity-volleyball, .activity-sjakk {
     padding: 6rem 3rem;
     display: flex;
     justify-content: center;
@@ -228,6 +228,11 @@
     display: block;
 }
 
+/* Sjakk Section - Show hidden content on Check */
+#toggle-more-info-sjakk:checked ~ .more-info {
+    display: block;
+}
+
 .read-more-label:hover {
     background-color: #e6b800;
 }
@@ -237,7 +242,7 @@
 }
 
 /* Activity Images */
-.football-images, .volleyball-images {
+.football-images, .volleyball-images, .sjakk-images {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -245,24 +250,24 @@
     max-width: 750px;
 }
 
-.football-image-container, .volleyball-image-container{
+.football-image-container, .volleyball-image-container, .sjakk-image-container {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
-.football-images img, .volleyball-images img{
+.football-images img, .volleyball-images img, .sjakk-images img{
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
 }
 
-.football-images img:hover, .volleyball-images img:hover{
+.football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover{
     transform: scale(1.05);
 }
 
-.football-image-container .photo-credit, .volleyball-image-container .photo-credit{
+.football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit{
     position: absolute;
     bottom: 5px;
     right: 5px;
