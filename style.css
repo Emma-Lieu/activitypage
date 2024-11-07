@@ -186,13 +186,25 @@
     padding: 2rem;
     border-radius: 8px;
     width: 100%;
-    max-width: 650px;
-    line-height: 1.6;
+    max-width: 750px;
+    line-height: 1.8;
     box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    font-size: 1.25;
+}
+
+.info-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color)
+}
+.info-box p {
+    font-size: 1.5rem;
+    color: #555;
 }
 
 .read-more-label {
     display: inline-block;
+    font-size: 1.2rem;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     background-color: var(--primary-color);
@@ -230,7 +242,7 @@
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
-    max-width: 650px;
+    max-width: 750px;
 }
 
 .football-image-container, .volleyball-image-container{
