@@ -169,7 +169,7 @@
 }
 
 /* Activity Section Styling */
-.activity-football, .activity-volleyball, .activity-sjakk {
+.activity-football, .activity-volleyball, .activity-sjakk, .activity-fottur , .activity-padletur {
     padding: 6rem 3rem;
     display: flex;
     justify-content: center;
@@ -180,7 +180,7 @@
 }
 
 /* Activity Images */
-.football-images, .volleyball-images, .sjakk-images {
+.football-images, .volleyball-images, .sjakk-images, .fottur-images, .padletur-images {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -188,24 +188,27 @@
     max-width: 750px;
 }
 
-.football-image-container, .volleyball-image-container, .sjakk-image-container {
+.football-image-container, .volleyball-image-container, .sjakk-image-container, .fottur-image-container, .padletur-image-container {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    height: 400px;
+    width: 100%;
 }
 
-.football-images img, .volleyball-images img, .sjakk-images img{
+.football-images img, .volleyball-images img, .sjakk-images img, .fottur-images img, .padletur-images img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover{
+.football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover, .fottur-images img:hover, .padletur-images img:hover {
     transform: scale(1.05);
 }
 
-.football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit{
+.football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit, .fottur-image-container .photo-credit, .padletur-image-container .photo-credit {
     position: absolute;
     bottom: 5px;
     right: 5px;
