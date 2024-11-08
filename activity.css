@@ -169,7 +169,7 @@
 }
 
 /* Activity Section Styling */
-.activity-football, .activity-volleyball, .activity-sjakk, .activity-fottur , .activity-padletur {
+.activity-football, .activity-volleyball, .activity-sjakk, .activity-fottur , .activity-padletur, .activity-sykkeltur {
     padding: 6rem 3rem;
     display: flex;
     justify-content: center;
@@ -180,7 +180,7 @@
 }
 
 /* Activity Images */
-.football-images, .volleyball-images, .sjakk-images, .fottur-images, .padletur-images {
+.football-images, .volleyball-images, .sjakk-images, .fottur-images, .padletur-images, .sykkeltur-images {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -188,7 +188,7 @@
     max-width: 750px;
 }
 
-.football-image-container, .volleyball-image-container, .sjakk-image-container, .fottur-image-container, .padletur-image-container {
+.football-image-container, .volleyball-image-container, .sjakk-image-container, .fottur-image-container, .padletur-image-container, .sykkeltur-image-container {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
@@ -197,18 +197,18 @@
     width: 100%;
 }
 
-.football-images img, .volleyball-images img, .sjakk-images img, .fottur-images img, .padletur-images img {
+.football-images img, .volleyball-images img, .sjakk-images img, .fottur-images img, .padletur-images img, .sykkeltur-images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover, .fottur-images img:hover, .padletur-images img:hover {
+.football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover, .fottur-images img:hover, .padletur-images img:hover, .sykkeltur-images img:hover {
     transform: scale(1.05);
 }
 
-.football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit, .fottur-image-container .photo-credit, .padletur-image-container .photo-credit {
+.football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit, .fottur-image-container .photo-credit, .padletur-image-container .photo-credit, .sykkeltur-image-container .photo-credit {
     position: absolute;
     bottom: 5px;
     right: 5px;
