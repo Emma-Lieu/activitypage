@@ -9,10 +9,11 @@
 
 /* Root Colors for Consistency */
 :root {
-    --primary-color: #ffa500;
-    --secondary-color: #333;
+    --primary-color: #59a985; /*#ffa500;*/
+    --secondary-color: #392f2f;
     --overlay-color: rgba(0, 0, 0, 0.6);
     --text-color: white;
+    --background-color: #f0f0e4;
 }
 
 /* Navbar Styling */  
@@ -54,7 +55,7 @@
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: #333;
+    background-color: var(--secondary-color);
     font-family: inherit; /* Important for vertical align on mobile phones */
     cursor: pointer;
     margin: 0; /* Important for vertical align on mobile phones */
@@ -140,12 +141,12 @@
     padding: 6rem 3rem;
     display: flex;
     justify-content: center;
-    background-color: #fdfaf5;
+    background-color: var(--text-color);
 }
 
 /* Foreninger og Friluft Content Box */
 .foreninger-content , .friluft-content {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--background-color);
     padding: 3rem;
     border-radius: 8px;
     width: 90%;
@@ -173,7 +174,7 @@
     padding: 6rem 3rem;
     display: flex;
     justify-content: center;
-    background-color: #fdfaf5;
+    background-color: var(--text-color);
     color: var(--text-color);
     flex-wrap: wrap;
     gap: 2rem;
@@ -220,7 +221,7 @@
 
 /* Info Box */
 .info-box {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--background-color);
     color: #333;
     padding: 2rem;
     border-radius: 8px;
@@ -273,7 +274,7 @@
 }
 
 .read-more-label:hover {
-    background-color: #e6b800;
+    background-color: #3a7563;
 }
 
 .more-info {
@@ -282,8 +283,8 @@
 
 /* Footer Styling */
 .footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 2rem;
     text-align: center;
 }
@@ -298,7 +299,7 @@
 }
 
 .footer-links a {
-    color: #fff;
+    color: var(--text-color);
     margin: 0 1rem;
     text-decoration: none;
     font-size: 1rem;
@@ -306,7 +307,7 @@
 }
 
 .footer-links a:hover {
-    color: #ff9141; /* Optional color change on hover */
+    color: var(--primary-color); /* Optional color change on hover */
 }
 
 .footer p {
