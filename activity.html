@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="activity.css">
+</head>
+
+<body>
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>ACTIVITY PAGE</h1>
+        </div>
+
+        <div class="right-menu">
+
+            <!-- Dropdown Menu For "Pages" -->  
+            <div class="dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+                <button class="dropbtn">Pages 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="activity.html">Activity-page</a>
+                    <a href="add home page link">Home-page</a>
+                    <a href="github.html">GitHub-page</a>
+                    <a href="accessibility.html">Accessibility-page</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Menu For "Foreninger" -->  
+            <div class="dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+                <button class="dropbtn">Foreninger 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#fotball">Fotball Forening</a>
+                    <a href="#volleyball">Volleyball Forening</a>
+                    <a href="#sjakk">Sjakk Forening</a>
+                </div>
+            </div>
+
+            <!-- Dropdown Menu For "Natur" -->
+            <div class="dropdown">       <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+                <button class="dropbtn">Friluft
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#fottur">Fottur</a>
+                    <a href="#padling">Padletur</a>
+                    <a href="#sykkeltur">Sykkeltur</a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>Activity Page</h1>
+            <h2> Aktiviteter for studenter i Oslo </h2>
+        </div>
+        <div class="photo-credit">FOTO: Eric Sanman</div>
+    </section>
+
+    <!-- Intro Foreninger Section -->
+    <section class="foreninger">
+        <div class="foreninger-content">
+            <h2> Foreninger 
+                <i class="material-icons" style="font-size:48px">people</i>     <!-- Source for icon-code: https://www.w3schools.com/icons/tryit.asp?filename=tryicons_google-people -->
+            </h2> 
+            <p><strong> «Å delta i foreningslivet gir deg en unik sjanse til å utvide ditt sosiale nettverk, utvikle dine ferdigheter, og skape minner som varer livet ut.»</strong> - Ida Barstad Fagerland</p>    <!-- Quote from: https://www.sio.no/foreninger/ansatte-sio-foreninger -->
+        </div>
+    </section>
+
+
+    <!-- Football Section -->
+    <section class="activity-football" id="fotball">
+        <div class="football-content">
+
+        <!-- Images with Photo Credits -->
+            <div class="football-images">
+                <div class="football-image-container">
+                    <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">  <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
+                        <img src="https://images.pexels.com/photos/9468611/pexels-photo-9468611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Football Image 1">
+                    </a>
+                    <div class="photo-credit">FOTO: Omar Ramadan</div>
+                </div>
+            </div>
+
+            <!-- Information Box -->
+            <div class="info-box">
+                <h2>FIFI - Fotballforeningen ved Institutt for Informatikk</h2>
+                <p>FIFI har siden 2012 arrangert ukentlige fotballtreninger for studenter ved Institutt for informatikk. Her er alle informatikkstudenter velkomne, uavhengig av nivå og erfaring.</p>
+
+                <!-- Hidden Checkbox for Toggle -->
+                <input type="checkbox" id="toggle-more-info" class="toggle-checkbox">  <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
+                <!-- Label for the Checkbox to act as "Read More" Button -->
+                <label for="toggle-more-info" class="read-more-label">Les Mer</label>
+
+                <!-- Additional Information to Show/Hide -->
+                <div class="more-info">   <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
+                    <p>FIFI tilbyr studenter et faglig avbrekk, gjennom ukentlige fotballtreninger og andre sosiale eventer. Treningene holdes to ganger i uka, hele året. Vi spiller utendørs på Athletica Domus og innendørs på Athletica Blindern. Det er derfor nødvendig med medlemskap hos Athletica for å trene med oss.</p>
+                    <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
+                    <p><strong>Kontakt</strong></p>
+                    <p><strong>E-post:</strong> kontakt@fotballvedifi.no</p>
+                    <p><strong>Nettside:</strong> <a href="https://www.facebook.com/groups/fifivedifi/" target="_blank">Facebook siden</a></p>
+                    <p><strong>Kontaktpersoner:</strong> Loc Phuoc Tran Nguyen</p>
+                    <p><strong>Telefon:</strong> 46765601</p>
+                    <p><strong>E-post:</strong> ngloc01@gmail.com</p>
+                    <p><strong>Adresse:</strong> Ole Johan Dahls hus, Gaustadalléen 23B, 0373 Oslo</p>
+                    <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her</a></p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Volleyball Section -->
+    <section class="activity-volleyball" id="volleyball">
+        <div class="volleyball-content">
+
+        <!-- Images with Photo Credits -->
+            <div class="volleyball-images">
+                <div class="volleyball-image-container">
+                    <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">    <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
+                        <img src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Volleyball Image 1">
+                    </a>
+                    <div class="photo-credit">FOTO: Jim De Ramos</div>
+                </div>
+            </div>
+
+            <!-- Info box -->
+            <div class="info-box">
+                <h2> VIFI - Volleyballforening ved Institutt for Informatikk </h2>
+                <p> VIFI er en volleyballforening for studenter på Institutt for Informatikk og ønsker å fremme et godt studentmiljø. </p>
+
+                 <!-- Hidden Checkbox for Toggle -->
+                 <input type="checkbox" id="toggle-more-info-volleyball" class="toggle-checkbox">   <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
+                 <!-- Label for the Checkbox to act as "Read More" Button -->
+                 <!-- Label for the Checkbox to act as "Read More" Button -->
+                 <label for="toggle-more-info-volleyball" class="read-more-label">Les Mer</label>
+
+                 <!-- Additional Information to Show/Hide -->
+                <div class="more-info">         <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
+                  <p>Medlemmene i VIFI spiller volleyball sammen halvannen time i uken på SiO Athletica. Med lav terskel for å bli med og et hovedfokus på å fremme et godt sosialt miljø for alle studenter på IFI.</p>
+                  <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
+                  <p><strong>Kontakt</strong></p>
+                  <p><strong>E-post:</strong> volleyball-if@outlook.com</p>
+                  <p><strong>Nettside:</strong> <a href="https://www.facebook.com/profile.php?id=100057089814612" target="_blank">Facebook siden</a></p>
+                  <p><strong>Kontaktpersoner:</strong> Nore Skulesson Stene</p>
+                  <p><strong>Telefon:</strong> 98006669</p>
+                  <p><strong>E-post:</strong> nore.stene@outlook.com/p>
+                  <p><strong>Adresse:</strong> Gaustadalleen 23b, Postboks 1080, 0316 Oslo</p>
+                  <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her</a></p>
+                </div>
+
+            </div> 
+        </div>
+    </section>
+
+
+    <!-- Sjakk Section -->
+    <section class="activity-sjakk" id="sjakk">
+        <div class="sjakk-content">
+
+        <!-- Images with Photo Credits -->
+            <div class="sjakk-images">
+                <div class="sjakk-image-container">
+                    <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">    <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
+                        <img src="https://images.pexels.com/photos/6955018/pexels-photo-6955018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sjakk Image">
+                    </a>
+                    <div class="photo-credit">FOTO: Kaboompics.com </div>
+                </div>
+            </div>
+
+            <!-- Info box -->
+            <div class="info-box">
+                <h2> IFI - Sjakkforening på Institutt for informatikk </h2>
+                <p> IFI Sjakk sitt formål er å være en interesseforening for sjakkinteresserte studenter ved Institutt for informatikk ved Universitetet i Oslo. Foreningen skal ha jevnlige arrangementer med fokus på sjakk. </p>
+
+                 <!-- Hidden Checkbox for Toggle -->
+                 <input type="checkbox" id="toggle-more-info-sjakk" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
+                 <!-- Label for the Checkbox to act as "Read More" Button -->
+                 <label for="toggle-more-info-sjakk" class="read-more-label">Les Mer</label>
+
+                 <!-- Additional Information to Show/Hide -->
+                <div class="more-info">         <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
+                  <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
+                  <p><strong>Kontakt</strong></p>
+                  <p><strong>E-post:</strong> oyvindb.hansen@gmail.com</p>
+                  <p><strong>Nettside:</strong> <a href="https://www.facebook.com/ifisjakk" target="_blank">Facebook siden</a></p>
+                  <p><strong>Kontaktpersoner:</strong> Eirik Strand</p>
+                  <p><strong>Telefon:</strong> 95444752</p>
+                  <p><strong>E-post:</strong> eirikst2000@gmail.com </p>
+                  <p><strong>Adresse:</strong> Gaustadalleen 23b, 0373 Oslo</p>
+                  <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her</a></p>
+                </div>
+
+            </div> 
+        </div>
+    </section>
+
+     <!-- Intro Friluft Section -->
+     <section class="friluft">
+        <div class="friluft-content">
+            <h2> Friluft 
+                <i class='fas fa-mountain' style='font-size:48px'></i>  <!-- Source for Icon-code: https://www.w3schools.com/icons/tryit.asp?icon=fas_fa-mountain&unicon=f6fc -->
+            </h2>
+            <p><strong> Finn din tur blant tusenvis av turforslag og hytter i hele Norge.</strong>  -UT.no</p>    <!-- Quote from: https://ut.no/ -->
+        </div>
+    </section>
+
+
+
+             </div>
+
+
+        </div>
+    </section>
+</body>
+
+</html>
