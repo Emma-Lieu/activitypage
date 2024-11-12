@@ -14,7 +14,7 @@
     <header class="navbar">
         <div class="logo">
             <h1>ACCESSIBILITY PAGE
-                <i style='font-size:24px' class='fab'>&#xf368;</i>  <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?icon=fab_fa-accessible-icon&unicon=f368 -->
+                <i style='font-size:24px' class='far'>&#xf044;</i> <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?icon=fab_fa-accessible-icon&unicon=f368 -->
             </h1>
         </div>
 
@@ -26,17 +26,66 @@
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="accessibility.html"><strong><u>Accessibility-page</u></strong></a>     <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
-                    <a href="github.html">GitHub-page</a>
                     <a href="activity.html">Activity-page</a>
                     <a href="add home page link">Home-page</a>
+                    <a href="github.html">GitHub-page</a>
+                    <a href="accessibility.html"><strong><u>Accessibility-page</u></strong></a>     <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
                 </div>
             </div>
+
+            <!-- Dropdown Menu For "Menu" -->  
+            <div class="dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+                <button class="dropbtn">Menu 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#introduction"> Text section </a>     <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
+                    <a href="#2">2</a>
+                    <a href="#3">3</a>
+                    <a href="#4">4</a>
+                </div>
+            </div>
+
         </div>
     </header>
 
-    
+    <!-- Introduction to the Accessibility page -->
+    <section class="Introduction" id="introduction">
+        <div class="introduction-content">
+            <h1> Acessibility-Page 
+                <i class='far fa-edit' style='font-size:48px;color:red'></i>  <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?icon=fab_fa-accessible-icon&unicon=f368 -->
+            </h1>
+            <h3> Coding choices for universal design </h3> 
+            <h2> MatMod page </h2> 
+            <p> We chose this design because........ </p>  
+            <h2> Activity page </h2> 
+            <p> This page could have a different layout and color design than the other pages, 
+                therefor we chose a nature inspired color pallette, with browns and greens, this is because it fit the hero image we had in mind. 
+                However the typical brown and green will look washed out or blurry for many people with colorblindness, however magenta
+                tones and green are color blindness friendly, we therefor chose a magenta undertoned brown for our pallette, which made 
+                it more colorblindness friendly. We also chose to have root colors in our css to have more 
+                consistancy with the color palette throughout the page, so it the page is cohesive. 
+                Furthermore, we chose to have a sticky navigation bar, so the users easily can click around the webpage
+                for an easier scrolling experience. The " Pages " dropdown button also underlines what page the user is currently on,
+                for better universal design. In addition to that the boxes have a shadow around them to emphasize 
+                where the Information lies for better readibility. We also chose to use " Arial Sans-Serif " 
+                font because it has the best readibility, so it takes in account for older people, or people with bad vision. 
+            </p>
+        </div>
+    </section>
 
+    <!-- Footer section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="#introduction"><strong>Tilbake til Toppen</strong></a>
+            </div>
+            <p>&copy; 2024 Group 6. All rights reserved</p>
+        </div>
+     </footer>
+
+   
+    
 
 </body>
 </html>

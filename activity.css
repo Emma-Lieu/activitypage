@@ -7,13 +7,14 @@
     font-family: Arial, sans-serif;
 }
 
-/* Root Colors for Consistency */
-:root {
-    --primary-color: #59a985; /*#ffa500;*/
-    --secondary-color: #392f2f;
+/* Root Colors for Consistency  -   Source: https://www.w3schools.com/css/css3_variables.asp */ 
+:root { 
+    --primary-color: #59a985; 
+    --secondary-color: #17050d; 
     --overlay-color: rgba(0, 0, 0, 0.6);
     --text-color: white;
-    --background-color: #f0f0e4;
+    --background-color: #ffffff;
+    --backdrop-color: #2f2926;
 }
 
 /* Navbar Styling */  
@@ -22,10 +23,12 @@
     top: 0;
     background-color: var(--secondary-color);
     color: var(--text-color);
+    flex-wrap: wrap;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem;
     z-index: 1000;
 }
 
@@ -104,6 +107,7 @@
     height: 100vh;
     background: url('https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: var(--text-color);
@@ -141,7 +145,7 @@
     padding: 6rem 3rem;
     display: flex;
     justify-content: center;
-    background-color: var(--text-color);
+    background-color: var(--backdrop-color);
 }
 
 /* Foreninger og Friluft Content Box */
@@ -152,7 +156,7 @@
     width: 90%;
     max-width: 850px;
     line-height: 1.8;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);  /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
     text-align: center; /* Center the text inside the content box */
 }
 
@@ -174,7 +178,7 @@
     padding: 6rem 3rem;
     display: flex;
     justify-content: center;
-    background-color: var(--text-color);
+    background-color: var(--backdrop-color);
     color: var(--text-color);
     flex-wrap: wrap;
     gap: 2rem;
@@ -193,7 +197,7 @@
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);   /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
     height: 400px;
     width: 100%;
 }
@@ -228,7 +232,7 @@
     width: 100%;
     max-width: 850px;
     line-height: 1.8;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);   /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
     font-size: 1.25;
 }
 
@@ -317,18 +321,155 @@
 
 
 
-/* Responsive Styles for Smaller Screens */
-@media (max-width: 768px) {
+/* Media Queries for better readability on different screens */
+
+
+/* Very Small screen */
+@media (max-width: 480px) {
+    /* Navbar Adjustments */
     .navbar {
-        flex-wrap: wrap;
-        align-items: center;
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align all items */
+        padding: 1rem;
+    }
+
+    .logo {
+        text-align: center; /* Center the logo text */
+        margin-bottom: 1rem; /* Add space between logo and buttons */
+    }
+
+    .right-menu {
+        display: flex; /* Buttons in a row */
+        justify-content: space-between; /* Spread buttons evenly */
+        width: 100%; /* Full width under the logo */
+        gap: 0; /* Remove gaps */
+        margin-top: 1rem; /* Space above buttons */
+    }
+
+    .dropdown .dropbtn {
+        width: 100%; /* Full-width buttons */
+        padding: 10px; /* Reduce padding */
+        font-size: 1rem; /* Smaller font size */
+    }
+
+    /* Hero Overlay */
+    .hero-overlay {
+        padding: 1rem; /* Compact padding */
+        font-size: 0.9rem; /* Smaller text */
     }
 
     .hero-overlay h1 {
-        font-size: 3rem;
+        font-size: 2.5rem; /* Smaller main heading */
     }
 
-    .info-box, .football-images, .volleyball-images {
-        max-width: 100%;
+    .hero-overlay h2 {
+        font-size: 1.2rem; /* Smaller subheading */
+    }
+
+    /* Foreninger and Friluft Headers */
+    .foreninger-content h2, .friluft-content h2 {
+        font-size: 1.8rem; /* Adjust header size for small screens */
+        margin-bottom: 1rem; /* Add spacing below header */
+        text-align: center; /* Center headers */
+    }
+
+    .foreninger-content p, .friluft-content p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+        line-height: 1.5; /* Maintain readability */
+    }
+
+    /* Activities Section */
+    .football-image-container, .volleyball-image-container, .sjakk-image-container,
+    .fottur-image-container, .padletur-image-container, .sykkeltur-image-container {
+        height: 250px; /* Adjust container height */
+    }
+
+    .info-box {
+        padding: 1rem; /* Compact padding */
+        font-size: 0.9rem; /* Smaller font */
+        line-height: 1.5; /* Maintain readability */
+        width: 100%; /* Fit to screen width */
+        max-width: 350px; /* Normal phone size */
+    }
+
+    .read-more-label {
+        font-size: 1rem; /* Adjust label size */
+    }
+}
+
+
+/* Small screens (Phones and small tablets) */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Navbar Adjustments */
+    .navbar {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align all items */
+        padding: 1.5rem; /* Slightly larger padding */
+    }
+
+    .logo {
+        text-align: center; /* Center the logo text */
+        margin-bottom: 1.5rem; /* Add spacing between logo and buttons */
+        font-size: 1.75rem; /* Larger font for tablets */
+    }
+
+    .right-menu {
+        display: flex; /* Buttons in a row */
+        justify-content: space-around; /* Evenly space buttons */
+        width: 100%; /* Full width under the logo */
+        gap: 1rem; /* Add gaps between buttons */
+        margin-top: 1.5rem; /* Add space above */
+    }
+
+    .dropdown .dropbtn {
+        width: auto; /* Adjust button width */
+        padding: 12px 16px; /* Larger padding for usability */
+        font-size: 1.2rem; /* Adjust font size */
+    }
+
+    /* Hero Overlay */
+    .hero-overlay {
+        padding: 1.5rem; /* Increase padding */
+        font-size: 1rem; /* Adjust text size */
+    }
+
+    .hero-overlay h1 {
+        font-size: 3.5rem; /* Larger main heading */
+    }
+
+    .hero-overlay h2 {
+        font-size: 1.5rem; /* Larger subheading */
+    }
+
+    /* Foreninger and Friluft Headers */
+    .foreninger-content h2, .friluft-content h2 {
+        font-size: 2.2rem; /* Larger header size for readability */
+        margin-bottom: 1rem; /* Add spacing below header */
+        text-align: center; /* Center headers */
+    }
+
+    .foreninger-content p, .friluft-content p {
+        font-size: 1rem; /* Adjust paragraph font size */
+        line-height: 1.6; /* Maintain readability */
+    }
+
+    /* Activities Section */
+    .football-image-container, .volleyball-image-container, .sjakk-image-container,
+    .fottur-image-container, .padletur-image-container, .sykkeltur-image-container {
+        height: 300px; /* Adjust container height */
+    }
+
+    .info-box {
+        padding: 1.5rem; /* Increase padding for readability */
+        font-size: 1rem; /* Adjust font size */
+        line-height: 1.6; /* Maintain readability */
+        width: 100%; /* Fit to screen width */
+        max-width: 450px; /* Normal tablet size */
+    }
+
+    .read-more-label {
+        font-size: 1.1rem; /* Slightly larger label */
     }
 }

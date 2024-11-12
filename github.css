@@ -39,7 +39,7 @@
 /* Right Menu Dropdown Styling */    /* Source for dropdown menu's: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
 .right-menu {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 /* The dropdown container */
@@ -54,7 +54,7 @@
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 1vw 2vw;
     background-color: #333;
     font-family: inherit; /* Important for vertical align on mobile phones */
     cursor: pointer;
@@ -67,14 +67,14 @@
     position: absolute;
     background-color:var(--secondary-color);
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
     z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
     color: var(--text-color);
-    padding: 12px 16px;
+    padding: 14px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -97,7 +97,7 @@
     background-color: var(--primary-color);
 }
 
-/* Foreninger og Friluft Section Styling */
+/* introduction Section Styling */
 .introduction {
     padding: 6rem 3rem;
     display: flex;
@@ -105,7 +105,7 @@
     background-color: var(--overlay-color);
 }
 
-/* Foreninger og Friluft Content Box */
+/* Introduction content */
 .introduction-content {
     background: rgba(255, 255, 255, 0.9);
     padding: 3rem;
@@ -113,7 +113,7 @@
     width: 90%;
     max-width: 850px;
     line-height: 1.8;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);   /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
 }
 
 .introduction-content h1 {
@@ -165,7 +165,7 @@
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2);     /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
     width: 100%;
     max-width: 850px;
     display: flex;
@@ -180,4 +180,171 @@
     transition: transform 0.3s ease;
     max-width: 100%;
     max-height: 100%;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color); /* Optional color change on hover */
+}
+
+.footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+
+/* Media Queries for different screen sizes */
+
+/* Specific styles for portrait phones (very small) */
+@media (max-width: 480px) {
+    
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+    }
+
+    .logo h1 {
+        font-size: 1rem;
+    }
+
+    .introduction {
+        padding: 3rem 1.5rem; /* Reduce padding */
+    }
+
+    .introduction-content {
+        padding: 2rem; /* Compact content padding */
+    }
+
+    .introduction-content h1 {
+        font-size: 2rem; /* Smaller header */
+    }
+
+    .introduction-content h3 {
+        font-size: 1.5rem; /* Smaller subheader */
+    }
+
+    .introduction-content p {
+        font-size: 1rem; /* Smaller paragraph text */
+        line-height: 1.4; /* Adjust line height for smaller font */
+    }
+
+    .git-pics {
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .photo-description1, .photo-description2, .photo-description3 {
+        font-size: 0.9rem;
+    }
+}
+
+/* Adjustments for phones and small tablets screens (small) */
+@media (min-width: 481px) and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.25rem;
+    }
+
+    .introduction {
+        padding: 4rem 2rem; /* Adjust padding */
+    }
+
+    .introduction-content {
+        padding: 2.5rem; /* Adjust content padding */
+    }
+
+    .introduction-content h1 {
+        font-size: 2.5rem; /* Slightly smaller header */
+    }
+
+    .introduction-content h3 {
+        font-size: 1.8rem; /* Adjust subheader */
+    }
+
+    .introduction-content p {
+        font-size: 1.2rem; /* Adjust paragraph text */
+        line-height: 1.5; /* Maintain readability */
+    }
+
+    .git-pics {
+        padding: 4rem 2rem;
+        gap: 1.5rem;
+    }
+
+    .photo-description1, .photo-description2, .photo-description3 {
+        font-size: 1rem;
+    }
+}
+
+ /* Styles for medium screens (tablets and small laptops) */
+@media (min-width: 769px) and (max-width: 1200px) {
+   
+    .navbar {
+        flex-direction: row;
+        padding: 1rem 2rem;
+    }
+
+    .introduction {
+        padding: 5rem 2.5rem; /* Adjust padding */
+    }
+
+    .introduction-content {
+        padding: 3rem; /* Maintain spacious padding */
+    }
+
+    .introduction-content h1 {
+        font-size: 2.8rem; /* Slightly smaller header */
+    }
+
+    .introduction-content h3 {
+        font-size: 1.9rem; /* Slightly smaller subheader */
+    }
+
+    .introduction-content p {
+        font-size: 1.4rem; /* Adjust paragraph text */
+        line-height: 1.7; /* Maintain readability */
+    }
+
+
+    .git-pics {
+        padding: 6rem 3rem;
+        gap: 2rem;
+    }
+
+    .git1-images, .git2-images, .git3-images {
+        gap: 2rem;
+    }
+
+    .photo-description1, .photo-description2, .photo-description3 {
+        font-size: 1.25rem;
+    }
 }

@@ -95,3 +95,119 @@
 .dropdown:focus-within .dropbtn {
     background-color: var(--primary-color);
 }
+
+/* introduction Section Styling */
+.introduction {
+    padding: 6rem 3rem;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack children vertically */
+    background-color: var(--overlay-color);
+    min-height: 100vh; /* Ensure it takes up full viewport height */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+
+/* Introduction content */
+.introduction-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 8px;
+    width: 90%; /* Ensure it's responsive */
+    max-width: 850px;
+    line-height: 1.8;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);      /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
+    text-align: auto; /* Ensure text is centered */
+    margin: 0 auto; /* Center content horizontally */
+    margin-top: 4rem; /* Space from the navbar */
+    margin-bottom: 4rem; /* Space at the bottom */
+}
+
+.introduction-content h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.introduction-content h3 {
+    font-size: 2rem;
+}
+
+.introduction-content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: var(--primary-color); /* Optional color change on hover */
+}
+
+.footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 768px) {
+
+.introduction-content {
+        padding: 2rem; /* Reduce padding for smaller screens */
+        width: 95%; /* Reduce width */
+    }
+
+
+.navbar {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center-align all items */
+    padding: 1rem; /* Slightly larger padding */
+}
+
+.logo {
+    text-align: center; /* Center the logo text */
+    margin-bottom: 0.5rem; /* Add spacing between logo and buttons */
+    font-size: 1.85rem; /* Larger font for tablets */
+}
+
+.right-menu {
+    display: flex; /* Buttons in a row */
+    justify-content: space-around; /* Evenly space buttons */
+    width: 100%; /* Full width under the logo */
+    gap: 1rem; /* Add gaps between buttons */
+    margin-top: 1rem; /* Add space above */
+}
+
+.dropdown .dropbtn {
+    width: auto; /* Adjust button width */
+    padding: 12px 16px; /* Larger padding for usability */
+    font-size: 1.2rem; /* Adjust font size */
+}
+}
