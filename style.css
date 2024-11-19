@@ -1,4 +1,3 @@
-
 /* Global Reset */
 * {
     margin: 0;
@@ -7,72 +6,78 @@
     font-family: Arial, sans-serif;
 }
 
-/* Root Colors for Consistency */
-:root {
-    --primary-color: #ffa500;
-    --secondary-color: #333;
-    --overlay-color: rgba(0, 0, 0, 0.6);
-    --text-color: white;
+/* ----------------------------ACTIVITY PAGE CSS ----------------------------*/ 
+
+/* Root Colors for Consistency  -   Source: https://www.w3schools.com/css/css3_variables.asp */ 
+:root { 
+    --activity-primary-color: #59a985; 
+    --activity-secondary-color: #17050d; 
+    --activity-overlay-color: rgba(0, 0, 0, 0.6);
+    --activity-text-color: white;
+    --activity-background-color: #ffffff;
+    --activity-backdrop-color: #2f2926;
 }
 
-/* Navbar Styling */
-.navbar {
-    position: sticky;
+/* Navbar Styling */  
+.activity-navbar {
+    position: sticky;  /* Sticky Navbar source : https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
     top: 0;
-    background-color: var(--secondary-color);
-    color: var(--text-color);
+    background-color: var(--activity-secondary-color);
+    color: var(--activity-text-color);
+    flex-wrap: wrap;
+    text-align: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1rem 2rem;
+    padding: 1rem;
     z-index: 1000;
 }
 
 /* Logo */
-.logo h1 {
-    color: var(--primary-color);
+.activity-logo h1 {
+    color: var(--activity-primary-color);
     font-size: 1.5rem;
     font-weight: bold;
 }
 
-/* Right Menu Dropdown Styling */    /* Source for dropdown menu: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
-.right-menu {
+/* Right Menu Dropdown Styling */    /* Source for dropdown menu's: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+.activity-right-menu {
     display: flex;
     gap: 1rem;
 }
 
 /* The dropdown container */
-.dropdown {
+.activity-dropdown {
     position: relative;
     display: inline-block
 }
 
 /* Dropdown Button */
-.dropdown .dropbtn {
+.activity-dropdown .activity-dropbtn {
     font-size: 20px;
     border: none;
     outline: none;
     color: white;
     padding: 14px 16px;
-    background-color: #333;
+    background-color: var(--activity-secondary-color);
     font-family: inherit; /* Important for vertical align on mobile phones */
     cursor: pointer;
     margin: 0; /* Important for vertical align on mobile phones */
 }
 
 /* Dropdown content (hidden by default) */
-.dropdown-content {
+.activity-dropdown-content {
     display: none;
     position: absolute;
-    background-color:var(--secondary-color);
+    background-color:var(--activity-secondary-color);
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
 /* Links inside the dropdown */
-.dropdown-content a {
-    color: var(--text-color);
+.activity-dropdown-content a {
+    color: var(--activity-text-color);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -80,20 +85,20 @@
 }
 
 /* Add a grey background color to dropdown links on hover */
-.dropdown-content a:hover {
+.activity-dropdown-content a:hover {
     background-color: #8b8b8b;
 }
 
 /* Show the dropdown content when hovering over the dropdown button or focusing within the dropdown */
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
+.activity-dropdown:hover .activity-dropdown-content,
+.activity-dropdown:focus-within .activity-dropdown-content {
     display: block;
 }
 
 /* Add a background color to the dropdown button on hover */
-.dropdown:hover .dropbtn,
-.dropdown:focus-within .dropbtn {
-    background-color: var(--primary-color);
+.activity-dropdown:hover .activity-dropbtn,
+.activity-dropdown:focus-within .activity-dropbtn {
+    background-color: var(--activity-primary-color);
 }
 
 /* Hero Section with Parallax Effect */
@@ -103,9 +108,10 @@
     height: 100vh;
     background: url('https://images.pexels.com/photos/1365425/pexels-photo-1365425.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') center/cover no-repeat;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: var(--text-color);
+    color: var(--activity-text-color);
     text-align: center;
     overflow: hidden;
 }
@@ -128,40 +134,40 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
-    background: var(--overlay-color);
-    color: var(--text-color);
+    background: var(--activity-overlay-color);
+    color: var(--activity-text-color);
     padding: 0.5rem 1rem;
     font-size: 0.875rem;
     border-radius: 4px;
 }
 
-/* Foreninger Section Styling */
-.foreninger {
+/* Foreninger og Friluft Section Styling */
+.foreninger , .friluft {
     padding: 6rem 3rem;
     display: flex;
     justify-content: center;
-    background-color: #fdfaf5;
+    background-color: var(--activity-backdrop-color);
 }
 
-/* Foreninger Content Box */
-.foreninger-content {
-    background: rgba(255, 255, 255, 0.9);
+/* Foreninger og Friluft Content Box */
+.foreninger-content , .friluft-content {
+    background: var(--activity-background-color);
     padding: 3rem;
     border-radius: 8px;
     width: 90%;
     max-width: 850px;
     line-height: 1.8;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);  /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
     text-align: center; /* Center the text inside the content box */
 }
 
-.foreninger-content h2 {
+.foreninger-content h2 , .friluft-content h2 {
     font-size: 2.5rem;
-    color: var(--primary-color);
+    color: var(--activity-primary-color);
     margin-bottom: 1rem;
 }
 
-.foreninger-content p {
+.foreninger-content p , .friluft-content p {
     font-size: 1.5rem;
     line-height: 1.6;
     color: #555;
@@ -169,47 +175,50 @@
 }
 
 /* Activity Section Styling */
-.activity-football, .activity-volleyball, .activity-sjakk {
+.activity-football, .activity-volleyball, .activity-sjakk, .activity-fottur , .activity-padletur, .activity-sykkeltur {
     padding: 6rem 3rem;
     display: flex;
     justify-content: center;
-    background-color: #fdfaf5;
-    color: var(--text-color);
+    background-color: var(--activity-backdrop-color);
+    color: var(--activity-text-color);
     flex-wrap: wrap;
     gap: 2rem;
 }
 
 /* Activity Images */
-.football-images, .volleyball-images, .sjakk-images {
+.football-images, .volleyball-images, .sjakk-images, .fottur-images, .padletur-images, .sykkeltur-images {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
-    max-width: 750px;
+    max-width: 850px;
 }
 
-.football-image-container, .volleyball-image-container, .sjakk-image-container {
+.football-image-container, .volleyball-image-container, .sjakk-image-container, .fottur-image-container, .padletur-image-container, .sykkeltur-image-container {
     position: relative;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);   /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
+    height: 400px;
+    width: 100%;
 }
 
-.football-images img, .volleyball-images img, .sjakk-images img{
+.football-images img, .volleyball-images img, .sjakk-images img, .fottur-images img, .padletur-images img, .sykkeltur-images img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover{
+.football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover, .fottur-images img:hover, .padletur-images img:hover, .sykkeltur-images img:hover {
     transform: scale(1.05);
 }
 
-.football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit{
+.football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit, .fottur-image-container .photo-credit, .padletur-image-container .photo-credit, .sykkeltur-image-container .photo-credit {
     position: absolute;
     bottom: 5px;
     right: 5px;
-    background: var(--overlay-color);
+    background: var(--activity-overlay-color);
     padding: 0.25rem 0.5rem;
     font-size: 0.75rem;
     border-radius: 4px;
@@ -217,21 +226,21 @@
 
 /* Info Box */
 .info-box {
-    background: rgba(255, 255, 255, 0.9);
+    background: var(--activity-background-color);
     color: #333;
     padding: 2rem;
     border-radius: 8px;
     width: 100%;
-    max-width: 750px;
+    max-width: 850px;
     line-height: 1.8;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);   /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
     font-size: 1.25;
 }
 
 .info-box h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
-    color: var(--secondary-color)
+    color: var(--activity-secondary-color)
 }
 .info-box p {
     font-size: 1.5rem;
@@ -243,7 +252,7 @@
     font-size: 1.2rem;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
-    background-color: var(--primary-color);
+    background-color: var(--activity-primary-color);
     color: #333;
     border-radius: 4px;
     cursor: pointer;
@@ -270,29 +279,433 @@
 }
 
 .read-more-label:hover {
-    background-color: #e6b800;
+    background-color: #3a7563;
 }
 
 .more-info {
     display: none;
 }
 
-/* Responsive Styles for Smaller Screens */
-@media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        align-items: flex-start;
-    }
-
-    .hero-overlay h1 {
-        font-size: 3rem;
-    }
-
-    .search-input {
-        width: 100%;
-    }
-
-    .info-box, .football-images, .volleyball-images {
-        max-width: 100%;
-    }
+/* Footer Styling */
+.activity-footer {
+    background-color: var(--activity-secondary-color);
+    color: var(--activity-primary-color);
+    padding: 2rem;
+    text-align: center;
 }
+
+.activity-footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.activity-footer-links {
+    margin-bottom: 1rem;
+}
+
+.activity-footer-links a {
+    color: var(--activity-text-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.activity-footer-links a:hover {
+    color: var(--activity-primary-color); /* Optional color change on hover */
+}
+
+.activity-footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+
+/* ----------------------------GITHUB PAGE SECTION CSS ----------------------------*/ 
+
+
+/* GIT-HUB Root Colors for Consistency */
+:root {
+    --git-primary-color: #0004ff;
+    --git-secondary-color: #333;
+    --git-overlay-color: rgb(100, 98, 98);
+    --git-text-color: white;
+}
+
+
+/* Navbar Styling */  
+.git-navbar {
+    position: sticky;  /* Sticky Navbar source : https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
+    top: 0;
+    background-color: var(--git-secondary-color);
+    color: var(--git-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    flex-wrap: wrap;
+}
+
+/* Logo */
+.git-logo h1 {
+    color: var(--git-primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Right Menu Dropdown Styling */    /* Source for dropdown menu's: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+.git-right-menu {
+    display: flex;
+    gap: 2rem;
+}
+
+/* The dropdown container */
+.git-dropdown {
+    position: relative;
+    display: inline-block
+}
+
+/* Dropdown Button */
+.git-dropdown .git-dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 1vw 2vw;
+    background-color: #333;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    cursor: pointer;
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.git-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:var(--git-secondary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);   /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.git-dropdown-content a {
+    color: var(--git-text-color);
+    padding: 14px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.git-dropdown-content a:hover {
+    background-color: #8b8b8b;
+}
+
+/* Show the dropdown content when hovering over the dropdown button or focusing within the dropdown */
+.git-dropdown:hover .git-dropdown-content,
+.git-dropdown:focus-within .git-dropdown-content {
+    display: block;
+}
+
+/* Add a background color to the dropdown button on hover */
+.git-dropdown:hover .git-dropbtn,
+.git-dropdown:focus-within .git-dropbtn {
+    background-color: var(--git-primary-color);
+}
+
+/* introduction Section Styling */
+.git-introduction {
+    padding: 6rem 3rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--git-overlay-color);
+}
+
+/* Introduction content */
+.git-introduction-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 850px;
+    line-height: 1.8;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);   /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
+}
+
+.git-introduction-content h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.git-introduction-content h3 {
+    font-size: 2rem;
+}
+
+.git-introduction-content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Git Image Section */
+
+.photo-description1, .photo-description2, .photo-description3 {
+    position: center;
+    bottom: 1rem;
+    right: 1rem;
+    background: var(--git-text-color);
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 4px;
+}
+
+.git-pics {
+    padding: 8rem 4rem;
+    display: flex;
+    justify-content: center;
+    background-color: var(--git-overlay-color);
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.git1-images, .git2-images, .git3-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+    max-width: 850px;
+    margin-bottom: 5rem;
+}
+
+.git1-image-container, .git2-image-container, .git3-image-container {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.2);     /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
+    width: 100%;
+    max-width: 850px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.git1-images img, .git2-images img, .git3-images img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Footer Styling */
+.git-footer {
+    background-color: var(--git-secondary-color);
+    color: var(--git-primary-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.git-footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.git-footer-links {
+    margin-bottom: 1rem;
+}
+
+.git-footer-links a {
+    color: var(--git-text-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.git-footer-links a:hover {
+    color: var(--git-primary-color); /* Optional color change on hover */
+}
+
+.git-footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+
+
+/* ----------------------------ACCESSIBILITY PAGE CSS ----------------------------*/ 
+
+
+
+/* Root Colors for Consistency */
+:root {
+    --accessibility-primary-color: #ff0000;
+    --accessibility-secondary-color: #333;
+    --accessibility-overlay-color: rgba(8, 7, 7, 0.6);
+    --accessibility-text-color: white;
+}
+
+
+/* Navbar Styling */  
+.accessibility-navbar {
+    position: sticky;  /* Sticky Navbar source : https://www.w3schools.com/howto/howto_js_navbar_sticky.asp */
+    top: 0;
+    background-color: var(--accessibility-secondary-color);
+    color: var(--accessibility-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1000;
+}
+
+/* Logo */
+.accessibility-logo h1 {
+    color: var(--accessibility-primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Right Menu Dropdown Styling */    /* Source for dropdown menu's: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
+.accessibility-right-menu {
+    display: flex;
+    gap: 1rem;
+}
+
+/* The dropdown container */
+.accessibility-dropdown {
+    position: relative;
+    display: inline-block
+}
+
+/* Dropdown Button */
+.accessibility-dropdown .accessibility-dropbtn {
+    font-size: 20px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #333;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    cursor: pointer;
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.accessibility-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:var(--accessibility-secondary-color);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.accessibility-dropdown-content a {
+    color: var(--accessibility-text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.accessibility-dropdown-content a:hover {
+    background-color: #8b8b8b;
+}
+
+/* Show the dropdown content when hovering over the dropdown button or focusing within the dropdown */
+.accessibility-dropdown:hover .accessibility-dropdown-content,
+.accessibility-dropdown:focus-within .accessibility-dropdown-content {
+    display: block;
+}
+
+/* Add a background color to the dropdown button on hover */
+.accessibility-dropdown:hover .accessibility-dropbtn,
+.accessibility-dropdown:focus-within .accessibility-dropbtn {
+    background-color: var(--accessibility-primary-color);
+}
+
+/* introduction Section Styling */
+.accessibility-introduction {
+    padding: 6rem 3rem;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack children vertically */
+    background-color: var(--accessibility-overlay-color);
+    min-height: 100vh; /* Ensure it takes up full viewport height */
+    box-sizing: border-box; /* Ensure padding is included in the height */
+}
+
+
+/* Introduction content */
+.accessibility-introduction-content {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 8px;
+    width: 90%; /* Ensure it's responsive */
+    max-width: 850px;
+    line-height: 1.8;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);      /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
+    text-align: auto; /* Ensure text is centered */
+    margin: 0 auto; /* Center content horizontally */
+    margin-top: 4rem; /* Space from the navbar */
+    margin-bottom: 4rem; /* Space at the bottom */
+}
+
+.accessibility-introduction-content h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.accessibility-introduction-content h3 {
+    font-size: 2rem;
+}
+
+.accessibility-introduction-content p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Footer Styling */
+.accessibility-footer {
+    background-color: var(--accessibility-secondary-color);
+    color: var(--accessibility-primary-color);
+    padding: 2rem;
+    text-align: center;
+}
+
+.accessibility-footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.accessibility-footer-links {
+    margin-bottom: 1rem;
+}
+
+.accessibility-footer-links a {
+    color: var(--accessibility-text-color);
+    margin: 0 1rem;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.accessibility-footer-links a:hover {
+    color: var(--accessibility-primary-color); /* Optional color change on hover */
+}
+
+.accessibility-footer p {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+
+/* MEDIA QUERIES FOR SMALLER AND LARGER SCREENS */
