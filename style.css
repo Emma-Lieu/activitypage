@@ -2,10 +2,10 @@
 
 Table of content in this CSS:
 
-- Global resets:
+- Global resets: line(35-41)
     1. general styling also font family
 
-- Activity Page styling:
+- Activity Page styling: line(43-367)
     1. Root valuables: for color consistency
     2. Navbar styling: Sticky navbar with dropdown menu styling + logo and right menu styles + Dropdown container, button, and content
     3. Hero section: Parallax effect with hero overlay + Text styling and photo credits.
@@ -13,20 +13,20 @@ Table of content in this CSS:
     5. Activity Section: Football, Volleyball, Sjakk, Fottur, Padletur, Sykkeltur + Image container and hover effect + Info box styling with "Read More" toggle functionality
     6. Footer Styling: Footer layout and links
 
-- GitHub Page styling;
+- GitHub Page styling; line(369-590)
     1. Root Variables: Primary, secondary, overlay, and text colors 
     2. Navbar Styling: Sticky navbar with dropdown menu styling + Logo and right menu styles + Dropdown container, button, and content
     3. Introduction Section (text): Introduction layout and content box styling
     4. Git Image Section: Image container and hover effect + Photo description
     5. Footer Styling: Footer layout and links
 
-- Accessibility Page CSS
+- Accessibility Page styling: line(594-783)
     1. Root Variables: for color consistency 
     2. Navbar Styling: Sticky navbar with dropdown menu styling + Logo and right menu styles + Dropdown container, button, and content
     3. Introduction Section: Introduction layout and content box styling
     4. Footer Styling: Footer layout and links
 
-- Media Queries
+- Media Queries 
     1. Media queries for responsive design for smaller and larger screens.
 
 
@@ -177,12 +177,12 @@ Table of content in this CSS:
 }
 .photo-credit {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
+    bottom: 1rem;
+    right: 1rem;
     background: var(--activity-overlay-color);
     color: var(--activity-text-color);
-    padding: 0.5rem 1rem;
-    font-size: 0.875rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
     border-radius: 4px;
 }
 
@@ -255,17 +255,28 @@ Table of content in this CSS:
     transition: transform 0.3s ease;
 }
 
+/* Creates a zoom in effect when hovering to indicate link */
 .football-images img:hover, .volleyball-images img:hover, .sjakk-images img:hover, .fottur-images img:hover, .padletur-images img:hover, .sykkeltur-images img:hover {
     transform: scale(1.05);
 }
 
+/* "klikk på bilde" text styling */
+.bottom-left-text {
+    position: relative;
+    font-size: 1.5rem;
+    bottom: 3rem;
+    left: 1.5rem;
+    color: var(--activity-text-color);
+    text-decoration: underline; 
+}
+
 .football-image-container .photo-credit, .volleyball-image-container .photo-credit, .sjakk-image-container .photo-credit, .fottur-image-container .photo-credit, .padletur-image-container .photo-credit, .sykkeltur-image-container .photo-credit {
     position: absolute;
-    bottom: 5px;
-    right: 5px;
+    bottom: 0.5rem;
+    right: 0.5rem;
     background: var(--activity-overlay-color);
     padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
     border-radius: 4px;
 }
 

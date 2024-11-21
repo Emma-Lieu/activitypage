@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity Page</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  <!-- Font awsome for icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> <!-- Font awsome for icons -->
     <link rel="stylesheet" href="style.css"> <!-- link to the external css -->
 </head>
 
@@ -19,19 +20,6 @@
         </h1>
 
         <nav class="activity-right-menu">
-            <!-- Dropdown Menu For "Pages" -->  
-            <section class="activity-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
-                <button class="activity-dropbtn">Pages 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <ul class="activity-dropdown-content">
-                    <li><a href="activity.html">Activity-page</a></li>  <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
-                    <li><a href="add home page link">MatMod-page</a></li>
-                    <li><a href="github.html">GitHub-page</a></li>
-                    <li><a href="accessibility.html">Accessibility-page</a></li>
-                </ul>
-            </section>
-
             <!-- Dropdown Menu For "Foreninger" -->  
             <section class="activity-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
                 <button class="activity-dropbtn">Foreninger 
@@ -53,6 +41,19 @@
                     <li><a href="#fottur">Fottur</a></li>
                     <li><a href="#padletur">Padletur</a></li>
                     <li><a href="#sykkeltur">Sykkeltur</a></li>
+                </ul>
+            </section>
+
+            <!-- Dropdown Menu For "Pages" -->  
+            <section class="activity-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+                <button class="activity-dropbtn">Pages 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <ul class="activity-dropdown-content">
+                    <li><a href="activity.html">Activity-page</a></li>  <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
+                    <li><a href="add home page link">MatMod-page</a></li>
+                    <li><a href="github.html">GitHub-page</a></li>
+                    <li><a href="accessibility.html">Accessibility-page</a></li>
                 </ul>
             </section>
         </nav>
@@ -90,6 +91,8 @@
                         <img src="https://images.pexels.com/photos/9468611/pexels-photo-9468611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Football Image 1">
                     </a>
                     <figcaption class="photo-credit">FOTO: Omar Ramadan</figcaption>
+                    <!-- Text in the bottom left corner of the image -->
+                    <div class="bottom-left-text">klikk på bilde for mer</div> <!-- to indicate that the image is a link -->
                 </figure>
             </div>
 
@@ -101,7 +104,7 @@
                 <!-- Hidden Checkbox for Toggle -->
                 <input type="checkbox" id="toggle-more-info" class="toggle-checkbox">  <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
                 <!-- Label for the Checkbox to act as "Read More" Button -->
-                <label for="toggle-more-info" class="read-more-label"><strong>Les Mer</strong></label>
+                <label for="toggle-more-info" class="read-more-label"><strong>Les Mer +</strong></label>
 
                 <!-- Additional Information to Show/Hide -->
                 <div class="more-info">   <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
@@ -131,6 +134,7 @@
                         <img src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Volleyball Image 1">
                     </a>
                     <figcaption class="photo-credit">FOTO: Jim De Ramos</figcaption>
+                    <div class="bottom-left-text">klikk på bilde for mer</div> <!-- to indicate that the image is a link -->
                 </figure>
             </div>
 
@@ -142,8 +146,7 @@
                  <!-- Hidden Checkbox for Toggle -->
                  <input type="checkbox" id="toggle-more-info-volleyball" class="toggle-checkbox">   <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
                  <!-- Label for the Checkbox to act as "Read More" Button -->
-                 <!-- Label for the Checkbox to act as "Read More" Button -->
-                 <label for="toggle-more-info-volleyball" class="read-more-label"><strong>Les Mer</strong></label>
+                 <label for="toggle-more-info-volleyball" class="read-more-label"><strong>Les Mer +</strong></label>
 
                  <!-- Additional Information to Show/Hide -->
                 <div class="more-info">         <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
@@ -174,6 +177,7 @@
                         <img src="https://images.pexels.com/photos/6955018/pexels-photo-6955018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sjakk Image">
                     </a>
                     <figcaption class="photo-credit">FOTO: Kaboompics.com </figcaption>
+                    <div class="bottom-left-text">klikk på bilde for mer</div> <!-- to indicate that the image is a link -->
                 </figure>
             </div>
 
@@ -185,7 +189,7 @@
                  <!-- Hidden Checkbox for Toggle -->
                  <input type="checkbox" id="toggle-more-info-sjakk" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
                  <!-- Label for the Checkbox to act as "Read More" Button -->
-                 <label for="toggle-more-info-sjakk" class="read-more-label"><strong>Les Mer</strong></label>
+                 <label for="toggle-more-info-sjakk" class="read-more-label"><strong>Les Mer +</strong></label>
 
                  <!-- Additional Information to Show/Hide -->
                 <div class="more-info">         <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
@@ -225,6 +229,7 @@
                         <img src="https://res.cloudinary.com/ntb/image/upload/w_1280,q_80/v1/trips/r0lonb0ok3zfwejad65z" alt="Fottur Image">
                     </a>
                     <figcaption class="photo-credit">FOTO: Anders Grøtnes </figcaption>
+                    <div class="bottom-left-text">klikk på bilde for mer</div>  <!-- to indicate that the image is a link -->
                 </figure>
             </div>
 
@@ -236,7 +241,7 @@
                  <!-- Hidden Checkbox for Toggle -->
                  <input type="checkbox" id="toggle-more-info-fottur" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
                  <!-- Label for the Checkbox to act as "Read More" Button -->
-                 <label for="toggle-more-info-fottur" class="read-more-label"><strong> Les Mer </strong></label>
+                 <label for="toggle-more-info-fottur" class="read-more-label"><strong> Les Mer +</strong></label>
 
                 <!-- Additional Information to Show/Hide -->
                 <div class="more-info">         <!-- Info found at: https://ut.no/turforslag/1112181073/forsvarsveien-opp-til-gyrihaugen -->
@@ -263,6 +268,7 @@
                         <img src="https://res.cloudinary.com/ntb/image/upload/w_1280,q_80/v1/trips/xckklmfnfennqcolo2yn" alt="Padletur Image">
                     </a>
                     <figcaption class="photo-credit">FOTO: Stian Opsahl </figcaption>
+                    <div class="bottom-left-text">klikk på bilde for mer</div>  <!-- to indicate that the image is a link -->
                 </figure>
             </div>
     
@@ -274,7 +280,7 @@
                 <!-- Hidden Checkbox for Toggle -->
                 <input type="checkbox" id="toggle-more-info-padletur" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
                 <!-- Label for the Checkbox to act as "Read More" Button -->
-                <label for="toggle-more-info-padletur" class="read-more-label"><strong> Les Mer </strong></label>
+                <label for="toggle-more-info-padletur" class="read-more-label"><strong> Les Mer +</strong></label>
     
                 <!-- Additional Information to Show/Hide -->
                 <div class="more-info">         <!-- Info found at: https://ut.no/turforslag/1112166324/rundtur-srenga-langyene -->
@@ -301,6 +307,7 @@
                             <img src="https://res.cloudinary.com/ntb/image/upload/w_1280,q_80/v1/trips/nsl2ekogmzpgdgaqzq4n" alt="Sykkeltur Image">
                         </a>
                         <figcaption class="photo-credit">FOTO: Øyvind Wold </figcaption>
+                        <div class="bottom-left-text">klikk på bilde for mer</div>  <!-- to indicate that the image is a link -->
                 </figure>
             </div>
         
@@ -312,7 +319,7 @@
                 <!-- Hidden Checkbox for Toggle -->
                 <input type="checkbox" id="toggle-more-info-sykkeltur" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
                 <!-- Label for the Checkbox to act as "Read More" Button -->
-                <label for="toggle-more-info-sykkeltur" class="read-more-label"><strong> Les Mer </strong></label>
+                <label for="toggle-more-info-sykkeltur" class="read-more-label"><strong> Les Mer +</strong></label>
         
                 <!-- Additional Information to Show/Hide -->
                 <div class="more-info">         <!-- Info found at: https://ut.no/turforslag/115555502/grnne-sykkelruter-hvervenbukta-ljanselva-hauketo-stasjon -->
