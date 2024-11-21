@@ -4,65 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GitHub</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Font Awesome icons -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-      <!-- Top Navigation Bar -->
+    
+    <!-- Header section -->
     <header class="git-navbar">
-        <div class="git-logo">
-            <h1>GITHUB PAGE
-                <i style="font-size:24px" class="fa">&#xf09b;</i>   <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-github -->
-            </h1>
-        </div>
+        <h1 class="git-logo">
+            GITHUB PAGE
+            <i style="font-size:40px" class="fa">&#xf09b;</i>   <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-github -->
+        </h1>
 
-        <div class="git-right-menu">
-
+        <!-- Top Navigation Menu -->
+        <nav class="git-right-menu">
             <!-- Dropdown Menu For "Pages" -->  
-            <div class="git-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+            <section class="git-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
                 <button class="git-dropbtn">Pages 
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="git-dropdown-content">
-                    <a href="activity.html">Activity-page</a>
-                    <a href="add home page link">Home-page</a>
-                    <a href="github.html"><strong><u>GitHub-page</u></strong></a>   <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
-                    <a href="accessibility.html">Accessibility-page</a>
-                </div>
-            </div>
+                <ul class="git-dropdown-content">
+                    <li><a href="activity.html">Activity-page</a></li>
+                    <li><a href="add home page link">MatMod-page</a></li>
+                    <li><a href="github.html">GitHub-page</a></li>  <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
+                    <li><a href="accessibility.html">Accessibility-page</a></li>
+                </ul>
+            </section>
 
              <!-- Dropdown Menu For "Foreninger" -->  
-             <div class="git-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+             <section class="git-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
                 <button class="git-dropbtn">Menu 
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="git-dropdown-content">
-                    <a href="#introduction">Short text</a>
-                    <a href="#commit1">Commit Image 1</a>
-                    <a href="#commit2">Commit Image 2</a>
-                    <a href="#commit3">Specific Change 1</a>
-                    <a href="#commit4">Specific Change 2</a>
-                </div>
-            </div>
-
+                <ul class="git-dropdown-content">
+                    <li><a href="#introduction">Short text</a></li>
+                    <li><a href="#commit1">Commit Image 1</a></li>
+                    <li><a href="#commit2">Commit Image 2</a></li>
+                    <li><a href="#commit3">Specific Change 1</a></li>
+                    <li><a href="#commit4">Specific Change 2</a></li>
+                </ul>
+            </section>
+        </nav>
     </header>
 
-        <!-- Intro Section -->
+    <!-- Main Content -->
+    <main>
+    <!-- Intro Section -->
     <section class="git-introduction" id="introduction">
         <div class="git-introduction-content">
             <h1> GitHub-Page 
-                <i class="fa fa-github" style="font-size:48px;color:#0004ff"></i>    <!-- Source for icon-code: https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-github -->
+                <i class="fa fa-github" style="font-size:48px;color:#FFD100"></i>    <!-- Source for icon-code: https://www.w3schools.com/icons/tryit.asp?filename=tryicons_fa-github -->
             </h1>
-            <h3> Positives </h3> 
-            <p> We find that collaboration in Github had good stucture and with the repositories it was easy to go back to the 
-                projects to know where the code went wrong </p>  
-            <h3> Negatives</h3> 
-            <p> It was a bit tedious to have to tell the other person when you where going to pull and push 
-                the projects so you didn't work at the same time, this was quite difficult
-                in the start but we got the hang of it as we worked more together. 
-            </p>
+            <article>
+                <h2> Positives </h2> 
+                    <p> We find that collaboration in Github had good stucture and with the repositories it was easy to go back to the 
+                    projects to know where the code went wrong </p>  
+                <h2> Negatives</h2> 
+                    <p> It was a bit tedious to have to tell the other person when you where going to pull and push 
+                    the projects so you didn't work at the same time, this was quite difficult
+                    in the start but we got the hang of it as we worked more together. </p>
+            </article>
         </div>
     </section>
 
@@ -70,48 +72,47 @@
     <section class="git-pics"> 
         <div class="git-content">
 
-        <div class="git1-images"> 
-            <div class="photo-description1" id="commit1" >Commits history image 1</div>
-            <div class="git1-image-container">
-                <img src="images/image1.png" alt="Git Image 1">
-            </div>
-        </div>
+            <!-- Commit History Image 1 -->
+            <article class="git1-images"  id="commit1"> 
+                <p class="photo-description1" >Commit history image 1</p>
+                <figure class="git1-image-container">
+                    <img src="images/image1.png" alt="Git Image 1">
+                </figure>
+            </article>
+             <!-- Commit History Image 2 -->
+            <article class="git2-images">
+                <p class="photo-description2" id="commit2">Commit history image 2</p>
+                <figure class="git2-image-container">
+                    <img src="images/image2.png" alt="Git Image 2">
+                </figure>
+            </article>
 
-        <div class="git2-images">
-            <div class="photo-description2" id="commit2">Commits history image 2</div>
-            <div class="git2-image-container">
-                <img src="images/image2.png" alt="Git Image 2">
-            </div>
-        </div>
+            <article class="git3-images">
+                <p class="photo-description3" id="commit3">Specific change 1 </p>
+                <figure class="git3-image-container">
+                    <img src="images/image3.png" alt="Git Image 3">
+                </figure>
+            </article>
 
-        <div class="git3-images">
-            <div class="photo-description3" id="commit3">Specific change 1 </div>
-            <div class="git3-image-container">
-                <img src="images/image3.png" alt="Git Image 3">
-            </div>
+            <article class="git3-images">
+                <p class="photo-description3" id="commit4">Specific change 2 </p>
+                <figure class="git3-image-container">
+                    <img src="images/image4.png" alt="Git Image 4">
+                </figure>
+            </article>
         </div>
-
-        <div class="git3-images">
-            <div class="photo-description3" id="commit4">Specific change 2 </div>
-            <div class="git3-image-container">
-                <img src="images/image4.png" alt="Git Image 4">
-            </div>
-        </div>
-
     </section>
+    </main>
 
     <!-- Footer section -->
     <footer class="git-footer">
-        <div class="git-footer-content">
-            <div class="git-footer-links">
+        <section class="git-footer-content">
+            <nav class="git-footer-links">
                 <a href="#introduction"><strong>Tilbake til Toppen</strong></a>
-            </div>
+            </nav>
             <p>&copy; 2024 Group 6. All rights reserved</p>
-        </div>
+        </section>
      </footer>
-
-
-        
 
 </body>
 </html>

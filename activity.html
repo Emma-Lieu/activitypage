@@ -5,61 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Activity Page</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  <!-- Font awsome for icons -->
+    <link rel="stylesheet" href="style.css"> <!-- link to the external css -->
 </head>
 
 <body>
 
     <!-- Top Navigation Bar -->
     <header class="activity-navbar">
-        <div class="activity-logo">
-            <h1>ACTIVITY PAGE
-                <i style='font-size:24px' class='fas'>&#xf554;</i>      <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?icon=fas_fa-walking&unicon=f554 -->
-            </h1>
-        </div>
+        <h1 class="activity-logo">
+           ACTIVITY PAGE
+                <i style="font: size 35px;" class='fas'>&#xf554;</i>      <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?icon=fas_fa-walking&unicon=f554 -->
+        </h1>
 
-        <div class="activity-right-menu">
-
+        <nav class="activity-right-menu">
             <!-- Dropdown Menu For "Pages" -->  
-            <div class="activity-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+            <section class="activity-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
                 <button class="activity-dropbtn">Pages 
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="activity-dropdown-content">
-                    <a href="activity.html"><strong><u>Activity-page</u></strong></a>   <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
-                    <a href="add home page link">Home-page</a>
-                    <a href="github.html">GitHub-page</a>
-                    <a href="accessibility.html">Accessibility-page</a>
-                </div>
-            </div>
+                <ul class="activity-dropdown-content">
+                    <li><a href="activity.html">Activity-page</a></li>  <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
+                    <li><a href="add home page link">MatMod-page</a></li>
+                    <li><a href="github.html">GitHub-page</a></li>
+                    <li><a href="accessibility.html">Accessibility-page</a></li>
+                </ul>
+            </section>
 
             <!-- Dropdown Menu For "Foreninger" -->  
-            <div class="activity-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+            <section class="activity-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
                 <button class="activity-dropbtn">Foreninger 
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="activity-dropdown-content">
-                    <a href="#fotball">Fotball Forening</a>
-                    <a href="#volleyball">Volleyball Forening</a>
-                    <a href="#sjakk">Sjakk Forening</a>
-                </div>
-            </div>
+                <ul class="activity-dropdown-content">
+                    <li><a href="#fotball">Fotball Forening</a></li>
+                    <li><a href="#volleyball">Volleyball Forening</a></li>
+                    <li><a href="#sjakk">Sjakk Forening</a></li>
+                </ul>
+            </section>
 
             <!-- Dropdown Menu For "Natur" -->
-            <div class="activity-dropdown">       <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+            <section class="activity-dropdown">       <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
                 <button class="activity-dropbtn">Friluft
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="activity-dropdown-content">
-                    <a href="#fottur">Fottur</a>
-                    <a href="#padletur">Padletur</a>
-                    <a href="#sykkeltur">Sykkeltur</a>
-                </div>
-            </div>
-
-        </div>
+                <ul class="activity-dropdown-content">
+                    <li><a href="#fottur">Fottur</a></li>
+                    <li><a href="#padletur">Padletur</a></li>
+                    <li><a href="#sykkeltur">Sykkeltur</a></li>
+                </ul>
+            </section>
+        </nav>
     </header>
 
     <!-- Hero Section -->
@@ -68,36 +64,37 @@
             <h1>Activity Page</h1>
             <h2> Aktiviteter for studenter i Oslo </h2>
         </div>
-        <div class="photo-credit">FOTO: Eric Sanman</div>
+        <figcaption class="photo-credit">FOTO: Eric Sanman</figcaption>  <!-- https://www.w3schools.com/tags/tag_figcaption.asp -->
     </section>
 
     <!-- Intro Foreninger Section -->
     <section class="foreninger" id="foreninger">
-        <div class="foreninger-content">
+        <article class="foreninger-content">
             <h2> Foreninger 
                 <i class="material-icons" style="font-size:48px">people</i>     <!-- Source for icon-code: https://www.w3schools.com/icons/tryit.asp?filename=tryicons_google-people -->
             </h2> 
-            <p><strong> «Å delta i foreningslivet gir deg en unik sjanse til å utvide ditt sosiale nettverk, utvikle dine ferdigheter, og skape minner som varer livet ut.»</strong> - Ida Barstad Fagerland</p>    <!-- Quote from: https://www.sio.no/foreninger/ansatte-sio-foreninger -->
-        </div>
+            <blockquote class="quote">
+                <strong>«Å delta i foreningslivet gir deg en unik sjanse til å utvide ditt sosiale nettverk, utvikle dine ferdigheter, og skape minner som varer livet ut.»</strong> - Ida Barstad Fagerland   <!-- Quote from: https://www.sio.no/foreninger/ansatte-sio-foreninger -->
+            </blockquote>
+        </article>
     </section>
 
 
     <!-- Football Section -->
     <section class="activity-football" id="fotball">
-        <div class="football-content">
-
-        <!-- Images with Photo Credits -->
+        <article class="football-content">
+            <!-- Images with Photo Credits -->
             <div class="football-images">
-                <div class="football-image-container">
+                <figure class="football-image-container">
                     <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">  <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
                         <img src="https://images.pexels.com/photos/9468611/pexels-photo-9468611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Football Image 1">
                     </a>
-                    <div class="photo-credit">FOTO: Omar Ramadan</div>
-                </div>
+                    <figcaption class="photo-credit">FOTO: Omar Ramadan</figcaption>
+                </figure>
             </div>
 
             <!-- Information Box -->
-            <div class="info-box">
+            <section class="info-box">
                 <h2>FIFI - Fotballforeningen ved Institutt for Informatikk</h2>
                 <p>FIFI har siden 2012 arrangert ukentlige fotballtreninger for studenter ved Institutt for informatikk. Her er alle informatikkstudenter velkomne, uavhengig av nivå og erfaring.</p>
 
@@ -119,27 +116,26 @@
                     <p><strong>Adresse:</strong> Ole Johan Dahls hus, Gaustadalléen 23B, 0373 Oslo</p>
                     <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her</a></p>
                 </div>
-            </div>
-
-        </div>
+            </section>
+        </article>
     </section>
 
     <!-- Volleyball Section -->
     <section class="activity-volleyball" id="volleyball">
-        <div class="volleyball-content">
+        <article class="volleyball-content">
 
         <!-- Images with Photo Credits -->
             <div class="volleyball-images">
-                <div class="volleyball-image-container">
+                <figure class="volleyball-image-container">
                     <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">    <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
                         <img src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Volleyball Image 1">
                     </a>
-                    <div class="photo-credit">FOTO: Jim De Ramos</div>
-                </div>
+                    <figcaption class="photo-credit">FOTO: Jim De Ramos</figcaption>
+                </figure>
             </div>
 
             <!-- Info box -->
-            <div class="info-box">
+            <section class="info-box">
                 <h2> VIFI - Volleyballforening ved Institutt for Informatikk </h2>
                 <p> VIFI er en volleyballforening for studenter på Institutt for Informatikk og ønsker å fremme et godt studentmiljø. </p>
 
@@ -151,39 +147,38 @@
 
                  <!-- Additional Information to Show/Hide -->
                 <div class="more-info">         <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
-                  <p>Medlemmene i VIFI spiller volleyball sammen halvannen time i uken på SiO Athletica. Med lav terskel for å bli med og et hovedfokus på å fremme et godt sosialt miljø for alle studenter på IFI.</p>
-                  <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
-                  <p><strong>Kontakt</strong></p>
-                  <p><strong>E-post:</strong> volleyball-if@outlook.com</p>
-                  <p><strong>Nettside:</strong> <a href="https://www.facebook.com/profile.php?id=100057089814612" target="_blank">Facebook siden</a></p>
-                  <p><strong>Kontaktpersoner:</strong> Nore Skulesson Stene</p>
-                  <p><strong>Telefon:</strong> 98006669</p>
-                  <p><strong>E-post:</strong> nore.stene@outlook.com/p>
-                  <p><strong>Adresse:</strong> Gaustadalleen 23b, Postboks 1080, 0316 Oslo</p>
-                  <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her</a></p>
+                    <p>Medlemmene i VIFI spiller volleyball sammen halvannen time i uken på SiO Athletica. Med lav terskel for å bli med og et hovedfokus på å fremme et godt sosialt miljø for alle studenter på IFI.</p>
+                    <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
+                    <p><strong>Kontakt</strong></p>
+                    <p><strong>E-post:</strong> volleyball-if@outlook.com</p>
+                    <p><strong>Nettside:</strong> <a href="https://www.facebook.com/profile.php?id=100057089814612" target="_blank">Facebook siden</a></p>
+                    <p><strong>Kontaktpersoner:</strong> Nore Skulesson Stene</p>
+                    <p><strong>Telefon:</strong> 98006669</p>
+                    <p><strong>E-post:</strong> nore.stene@outlook.com/p>
+                    <p><strong>Adresse:</strong> Gaustadalleen 23b, Postboks 1080, 0316 Oslo</p>
+                    <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her</a></p>
                 </div>
-
-            </div> 
-        </div>
+            </section> 
+        </article> 
     </section>
 
 
     <!-- Sjakk Section -->
     <section class="activity-sjakk" id="sjakk">
-        <div class="sjakk-content">
+        <article class="sjakk-content">
 
         <!-- Images with Photo Credits -->
             <div class="sjakk-images">
-                <div class="sjakk-image-container">
+                <figure class="sjakk-image-container">
                     <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">    <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
                         <img src="https://images.pexels.com/photos/6955018/pexels-photo-6955018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sjakk Image">
                     </a>
-                    <div class="photo-credit">FOTO: Kaboompics.com </div>
-                </div>
+                    <figcaption class="photo-credit">FOTO: Kaboompics.com </figcaption>
+                </figure>
             </div>
 
             <!-- Info box -->
-            <div class="info-box">
+            <section class="info-box">
                 <h2> IFI - Sjakkforening på Institutt for informatikk </h2>
                 <p> IFI Sjakk sitt formål er å være en interesseforening for sjakkinteresserte studenter ved Institutt for informatikk ved Universitetet i Oslo. Foreningen skal ha jevnlige arrangementer med fokus på sjakk. </p>
 
@@ -194,56 +189,56 @@
 
                  <!-- Additional Information to Show/Hide -->
                 <div class="more-info">         <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
-                  <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
-                  <p><strong>Kontakt</strong></p>
-                  <p><strong>E-post:</strong> oyvindb.hansen@gmail.com</p>
-                  <p><strong>Nettside:</strong> <a href="https://www.facebook.com/ifisjakk" target="_blank">Facebook siden</a></p>
-                  <p><strong>Kontaktpersoner:</strong> Eirik Strand</p>
-                  <p><strong>Telefon:</strong> 95444752</p>
-                  <p><strong>E-post:</strong> eirikst2000@gmail.com </p>
-                  <p><strong>Adresse:</strong> Gaustadalleen 23b, 0373 Oslo</p>
-                  <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her</a></p>
+                    <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
+                    <p><strong>Kontakt</strong></p>
+                    <p><strong>E-post:</strong> oyvindb.hansen@gmail.com</p>
+                    <p><strong>Nettside:</strong> <a href="https://www.facebook.com/ifisjakk" target="_blank">Facebook siden</a></p>
+                    <p><strong>Kontaktpersoner:</strong> Eirik Strand</p>
+                    <p><strong>Telefon:</strong> 95444752</p>
+                    <p><strong>E-post:</strong> eirikst2000@gmail.com </p>
+                    <p><strong>Adresse:</strong> Gaustadalleen 23b, 0373 Oslo</p>
+                    <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her</a></p>
                 </div>
-
-            </div> 
-        </div>
+            </section> 
+        </article>
     </section>
 
      <!-- Intro Friluft Section -->
      <section class="friluft" id="friluft">
-        <div class="friluft-content">
+        <article class="friluft-content">
             <h2> Friluft 
                 <i class='fas fa-mountain' style='font-size:48px'></i>  <!-- Source for Icon-code: https://www.w3schools.com/icons/tryit.asp?icon=fas_fa-mountain&unicon=f6fc -->
             </h2>
-            <p><strong> Finn din tur blant tusenvis av turforslag og hytter i hele Norge.</strong>  -UT.no</p>    <!-- Quote from: https://ut.no/ -->
-        </div>
+            <blockquote class="quote">
+                <strong>Finn din tur blant tusenvis av turforslag og hytter i hele Norge.</strong>  -UT.no    <!-- Quote from: https://ut.no/ -->
+            </blockquote>
+        </article>
     </section>
 
     <!--  Fottur Section -->
     <section class="activity-fottur" id="fottur">
-        <div class="fottur-content">
-
+        <article class="fottur-content">
         <!-- Images with Photo Credits -->
             <div class="fottur-images">
-                <div class="fottur-image-container">
+                <figure class="fottur-image-container">
                     <a href="https://ut.no/turforslag/1112181073/forsvarsveien-opp-til-gyrihaugen" target="_blank">    <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
                         <img src="https://res.cloudinary.com/ntb/image/upload/w_1280,q_80/v1/trips/r0lonb0ok3zfwejad65z" alt="Fottur Image">
                     </a>
-                    <div class="photo-credit">FOTO: Anders Grøtnes </div>
-                </div>
+                    <figcaption class="photo-credit">FOTO: Anders Grøtnes </figcaption>
+                </figure>
             </div>
 
             <!-- Info box -->
-            <div class="info-box">
+            <section class="info-box">
                 <h2> Fottur i Oslomarka - "Forsvarsveien" opp til Gyrihaugen </h2>
-                <p> <a href="https://ut.no/gruppe/151167/viker-helse"  target="_blank"> Av: Viker Helse </a> </p>
+                <p><a href="https://ut.no/gruppe/151167/viker-helse"  target="_blank"> Av: Viker Helse </a></p>
 
                  <!-- Hidden Checkbox for Toggle -->
                  <input type="checkbox" id="toggle-more-info-fottur" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
                  <!-- Label for the Checkbox to act as "Read More" Button -->
                  <label for="toggle-more-info-fottur" class="read-more-label"><strong> Les Mer </strong></label>
 
-                 <!-- Additional Information to Show/Hide -->
+                <!-- Additional Information to Show/Hide -->
                 <div class="more-info">         <!-- Info found at: https://ut.no/turforslag/1112181073/forsvarsveien-opp-til-gyrihaugen -->
                     <p> Gåturen starter ved bom på parkeringsplass (518moh). Du følger en bred og fin grusvei oppover mot Gyrihaugen. Etter ca 1,15km passerer du ett fint utsiktspunkt på venstre side. Turen fortsetter videre på grusvei. Etter 2,1km når du toppen av Gyrihaugen (682moh) Her kan du nyte en fantastisk 360 utsikt. Turen opp tar ca 45minutter i rolig tempo. Etter god pause på toppen, bruker du ca 25min tilbake til parkering</p>
                     <p>  .  </p>
@@ -254,106 +249,100 @@
                     <p><strong>Sesong:</strong> Apr - nov</p>
                     <p><strong>Offentlig lenke til mer om turen:</strong> <a href="https://ut.no/turforslag/1112181073/forsvarsveien-opp-til-gyrihaugen" target="_blank">Trykk her</a></p>
                 </div>
-
-            </div> 
-        </div>
+            </section> 
+        </article>
     </section>
 
-        <!--  Padletur Section -->
+    <!--  Padletur Section -->
     <section class="activity-padletur" id="padletur">
-        <div class="padletur-content">
-    
-        <!-- Images with Photo Credits -->
+        <article class="padletur-content">
+            <!-- Images with Photo Credits -->
             <div class="padletur-images">
-                <div class="padletur-image-container">
+                <figure class="padletur-image-container">
                     <a href="https://ut.no/turforslag/1112166324/rundtur-srenga-langyene" target="_blank">    <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
                         <img src="https://res.cloudinary.com/ntb/image/upload/w_1280,q_80/v1/trips/xckklmfnfennqcolo2yn" alt="Padletur Image">
                     </a>
-                    <div class="photo-credit">FOTO: Stian Opsahl </div>
-                </div>
+                    <figcaption class="photo-credit">FOTO: Stian Opsahl </figcaption>
+                </figure>
             </div>
     
             <!-- Info box -->
-                <div class="info-box">
-                    <h2> Padletur i Oslofjorden - Rundtur Sørenga - Langøyene </h2>
-                    <p> <a href="https://ut.no/gruppe/156/dnt-oslo-og-omegn"  target="_blank"> Av: DNT Oslo og Omegn </a> </p>
+            <section class="info-box">
+                <h2> Padletur i Oslofjorden - Rundtur Sørenga - Langøyene </h2>
+                <p><a href="https://ut.no/gruppe/156/dnt-oslo-og-omegn"  target="_blank"> Av: DNT Oslo og Omegn</a></p>
     
-                     <!-- Hidden Checkbox for Toggle -->
-                     <input type="checkbox" id="toggle-more-info-padletur" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
-                     <!-- Label for the Checkbox to act as "Read More" Button -->
-                     <label for="toggle-more-info-padletur" class="read-more-label"><strong> Les Mer </strong></label>
+                <!-- Hidden Checkbox for Toggle -->
+                <input type="checkbox" id="toggle-more-info-padletur" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
+                <!-- Label for the Checkbox to act as "Read More" Button -->
+                <label for="toggle-more-info-padletur" class="read-more-label"><strong> Les Mer </strong></label>
     
-                     <!-- Additional Information to Show/Hide -->
-                    <div class="more-info">         <!-- Info found at: https://ut.no/turforslag/1112166324/rundtur-srenga-langyene -->
-                        <p> Raskeste vei til Langøyene. </p>
-                        <p>  .  </p>
-                        <p><strong>Sted:</strong> Oslofjorden, Hovedøya landskapsvernområde, Gressholmen-Rambergøya naturreservat</p>
-                        <p><strong>Lengde</strong> 10,5 km</p>
-                        <p><strong>Tid:</strong> 2 t, 30 min</p>
-                        <p><strong>Sesong:</strong> Hele året </p>
-                        <p><strong>Offentlig lenke til mer om turen:</strong> <a href="https://ut.no/turforslag/1112166324/rundtur-srenga-langyene" target="_blank">Trykk her</a></p>
-                    </div>
-    
-                </div> 
-        </div>
+                <!-- Additional Information to Show/Hide -->
+                <div class="more-info">         <!-- Info found at: https://ut.no/turforslag/1112166324/rundtur-srenga-langyene -->
+                    <p> Raskeste vei til Langøyene. </p>
+                    <p>  .  </p>
+                    <p><strong>Sted:</strong> Oslofjorden, Hovedøya landskapsvernområde, Gressholmen-Rambergøya naturreservat</p>
+                    <p><strong>Lengde</strong> 10,5 km</p>
+                    <p><strong>Tid:</strong> 2 t, 30 min</p>
+                    <p><strong>Sesong:</strong> Hele året </p>
+                    <p><strong>Offentlig lenke til mer om turen:</strong> <a href="https://ut.no/turforslag/1112166324/rundtur-srenga-langyene" target="_blank">Trykk her</a></p>
+                </div>
+            </section> 
+        </article>
     </section>
 
 
         <!--  Sykkeltur Section -->
     <section class="activity-sykkeltur" id="sykkeltur">
-        <div class="sykkeltur-content">
-        
+        <article class="sykkeltur-content">
             <!-- Images with Photo Credits -->
-                <div class="sykkeltur-images">
-                    <div class="sykkeltur-image-container">
+            <div class="sykkeltur-images">
+                <figure class="sykkeltur-image-container">
                         <a href="https://ut.no/turforslag/1112166324/rundtur-srenga-langyene" target="_blank">    <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
                             <img src="https://res.cloudinary.com/ntb/image/upload/w_1280,q_80/v1/trips/nsl2ekogmzpgdgaqzq4n" alt="Sykkeltur Image">
                         </a>
-                        <div class="photo-credit">FOTO: Øyvind Wold </div>
-                    </div>
-                </div>
+                        <figcaption class="photo-credit">FOTO: Øyvind Wold </figcaption>
+                </figure>
+            </div>
         
             <!-- Info box -->
-                <div class="info-box">
-                    <h2> Grønne sykkelruter: Hvervenbukta - Ljanselva - Hauketo stasjon </h2>
-                    <p> <a href="https://ut.no/gruppe/151333/syklistforeningen"  target="_blank"> Av: Syklistforeningen </a> </p>
+            <section class="info-box">
+                <h2> Grønne sykkelruter: Hvervenbukta - Ljanselva - Hauketo stasjon </h2>
+                <p> <a href="https://ut.no/gruppe/151333/syklistforeningen"  target="_blank"> Av: Syklistforeningen </a> </p>
         
                 <!-- Hidden Checkbox for Toggle -->
-                    <input type="checkbox" id="toggle-more-info-sykkeltur" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
+                <input type="checkbox" id="toggle-more-info-sykkeltur" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
                 <!-- Label for the Checkbox to act as "Read More" Button -->
-                    <label for="toggle-more-info-sykkeltur" class="read-more-label"><strong> Les Mer </strong></label>
+                <label for="toggle-more-info-sykkeltur" class="read-more-label"><strong> Les Mer </strong></label>
         
                 <!-- Additional Information to Show/Hide -->
-                    <div class="more-info">         <!-- Info found at: https://ut.no/turforslag/115555502/grnne-sykkelruter-hvervenbukta-ljanselva-hauketo-stasjon -->
-                        <p> Ljanselva er en av de mindre kjente i Oslo, men har i likhet med Akerselva en fin turvei ved siden av seg. Omgivelsene er til dels tett skog, men også noen idrettsanlegg og korte strekk i boligstrøk. Turveien passerer de enorme brufundamentene til den gamle jernbaneviadukten over Ljanselva.
-                                Motbakkene som finnes gjør at turen ikke egner seg for de aller minste.
-                                Fra Hauketo kan man eventuelt sykle videre på fin separat sykkelvei opp til Klemetsrud (ca tre km.), der det starter en ny Grønn sykkelrute, i retning Skullerud. 
-                        </p>
-                        <p>  .  </p>
-                        <p><strong>Sted:</strong> Oslofjorden, Sørmarka </p>
-                        <p><strong>Lengde</strong> 3 km</p>
-                        <p><strong>Tid:</strong> 1 t </p>
-                        <p><strong>Høydemeter:</strong> 95 høydemeter totalt </p>
-                        <p><strong>Sesong:</strong> Apr - okt </p>
-                        <p><strong>Offentlig lenke til mer om turen:</strong> <a href="https://ut.no/turforslag/115555502/grnne-sykkelruter-hvervenbukta-ljanselva-hauketo-stasjon" target="_blank">Trykk her</a></p>
-                    </div>
-        
-        </div>
+                <div class="more-info">         <!-- Info found at: https://ut.no/turforslag/115555502/grnne-sykkelruter-hvervenbukta-ljanselva-hauketo-stasjon -->
+                    <p> Ljanselva er en av de mindre kjente i Oslo, men har i likhet med Akerselva en fin turvei ved siden av seg. Omgivelsene er til dels tett skog, men også noen idrettsanlegg og korte strekk i boligstrøk. Turveien passerer de enorme brufundamentene til den gamle jernbaneviadukten over Ljanselva.
+                        Motbakkene som finnes gjør at turen ikke egner seg for de aller minste.
+                        Fra Hauketo kan man eventuelt sykle videre på fin separat sykkelvei opp til Klemetsrud (ca tre km.), der det starter en ny Grønn sykkelrute, i retning Skullerud. 
+                    </p>
+                    <p>  .  </p>
+                    <p><strong>Sted:</strong> Oslofjorden, Sørmarka </p>
+                    <p><strong>Lengde</strong> 3 km</p>
+                    <p><strong>Tid:</strong> 1 t </p>
+                    <p><strong>Høydemeter:</strong> 95 høydemeter totalt </p>
+                    <p><strong>Sesong:</strong> Apr - okt </p>
+                    <p><strong>Offentlig lenke til mer om turen:</strong> <a href="https://ut.no/turforslag/115555502/grnne-sykkelruter-hvervenbukta-ljanselva-hauketo-stasjon" target="_blank">Trykk her</a></p>
+                </div>
+            </section>
+        </article>
     </section>
 
     <!-- Footer section -->
-     <footer class="activity-footer">
+    <footer class="activity-footer">
         <div class="activity-footer-content">
-            <div class="activity-footer-links">
+            <nav class="activity-footer-links">
                 <a href="#hero"><strong>Tilbake til Toppen</strong></a>
                 <a href="#foreninger"><strong> Foreninger </strong> </a>
                 <a href="#friluft"><strong> Friluft </strong></a>
-            </div>
+            </nav>
             <p>&copy; 2024 Group 6. All rights reserved</p>
         </div>
      </footer>
 
-
 </body>
-
 </html>

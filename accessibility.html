@@ -4,88 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accessibility</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">  
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">   <!-- Font Awesome icons -->
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>  <!-- Font Awesome icons -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Top Navigation Bar -->
     <header class="accessibility-navbar">
-        <div class="accessibility-logo">
+        <section class="accessibility-logo">
             <h1>ACCESSIBILITY PAGE
-                <i style='font-size:24px' class='far'>&#xf044;</i> <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?icon=fab_fa-accessible-icon&unicon=f368 -->
+                <i style='font-size:30px' class='far'>&#xf044;</i> <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?icon=fab_fa-accessible-icon&unicon=f368 -->
             </h1>
-        </div>
+        </section>
 
-        <div class="accessibility-right-menu">
-
+        <nav class="accessibility-right-menu">
             <!-- Dropdown Menu For "Pages" -->  
-            <div class="accessibility-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+            <section class="accessibility-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
                 <button class="accessibility-dropbtn">Pages 
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="accessibility-dropdown-content">
-                    <a href="activity.html">Activity-page</a>
-                    <a href="add home page link">Home-page</a>
-                    <a href="github.html">GitHub-page</a>
-                    <a href="accessibility.html"><strong><u>Accessibility-page</u></strong></a>     <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
-                </div>
-            </div>
+                <ul class="accessibility-dropdown-content">
+                    <li><a href="activity.html">Activity-page</a></li>
+                    <li><a href="add home page link">MatMod-page</a></li>
+                    <li><a href="github.html">GitHub-page</a></li>
+                    <li><a href="accessibility.html">Accessibility-page</a></li>     <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
+                </ul>
+            </section>
 
             <!-- Dropdown Menu For "Menu" -->  
-            <div class="accessibility-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
+            <section class="accessibility-dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
                 <button class="accessibility-dropbtn">Menu 
                     <i class="fa fa-caret-down"></i>
                 </button>
-                <div class="accessibility-dropdown-content">
-                    <a href="#introduction"> Text section </a>     <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
-                    <a href="#2">2</a>
-                    <a href="#3">3</a>
-                    <a href="#4">4</a>
-                </div>
-            </div>
-
-        </div>
+                <ul class="accessibility-dropdown-content">
+                    <li><a href="#introduction"> Text section </a></li>     <!-- Showing what page the user is currently on (Source: https://www.shecodes.io/athena/5739-how-to-underline-a-title-in-code-using-html)-->
+                    <li><a href="#2">Accessibility test 1</a></li>
+                    <li><a href="#3">3</a></li>
+                    <li><a href="#4">4</a></li>
+                </ul>
+            </section>
+        </nav>
     </header>
 
     <!-- Introduction to the Accessibility page -->
     <section class="accessibility-introduction" id="introduction">
-        <div class="accessibility-introduction-content">
-            <h1> Acessibility-Page 
-                <i class='far fa-edit' style='font-size:48px;color:red'></i>  <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?icon=fab_fa-accessible-icon&unicon=f368 -->
+        <article class="accessibility-introduction-content">
+            <h1> 
+                Acessibility-Page 
+                <i class='far fa-edit' style='font-size:48px;color:#FFD100'></i>  <!-- Source for icon: https://www.w3schools.com/icons/tryit.asp?icon=fab_fa-accessible-icon&unicon=f368 -->
             </h1>
-            <h3> Coding choices for universal design </h3> 
-            <h2> MatMod page </h2> 
-            <p> We chose this design because........ </p>  
-            <h2> Activity page </h2> 
-            <p> This page could have a different layout and color design than the other pages, 
-                therefor we chose a nature inspired color pallette, with browns and greens, this is because it fit the hero image we had in mind. 
-                However the typical brown and green will look washed out or blurry for many people with colorblindness, however magenta
-                tones and green are color blindness friendly, we therefor chose a magenta undertoned brown for our pallette, which made 
-                it more colorblindness friendly. We also chose to have root colors in our css to have more 
-                consistancy with the color palette throughout the page, so it the page is cohesive. 
-                Furthermore, we chose to have a sticky navigation bar, so the users easily can click around the webpage
-                for an easier scrolling experience. The " Pages " dropdown button also underlines what page the user is currently on,
-                for better universal design. In addition to that the boxes have a shadow around them to emphasize 
-                where the Information lies for better readibility. We also chose to use " Arial Sans-Serif " 
-                font because it has the best readibility, so it takes in account for older people, or people with bad vision. 
-            </p>
-        </div>
+            <h2>Coding choices for universal design</h2> 
+            <section>
+                <h3><strong>MatMod page:</strong></h3> 
+                <p> 
+                    For the Mathematical Modeling and Data Science – Engineering page, we kept OsloMet's characteristic colors to ensure continuity. 
+                    Yellow draws attention while evoking a sense of positivity and optimism. Black text was used in contrast with the yellow and 
+                    white background to ensure readability. The yellow background was applied selectively to specific sections rather than the entire page, 
+                    maintaining readability throughout the site. The chosen fonts: Arial, sans serif and Helvetica were carefully selected to enhance readability, 
+                    particularly for users with visual impairments. 
+                    Additionally, alternative text for images was utilized to ensure accessibility if the pictures fail to load. Button design was incorporated as 
+                    it aligns with several of Donald Norman's key design principles. Gestalt principles were also applied by grouping buttons in close proximity to 
+                    create a sense of relationship. We wanted consistency in the button shape and size which strengthens continuity and promotes intuitive interactions. 
+                    In order to facilitate an accessible navigation bar for a wide group of users we chose a sticky navigation bar. This particular choice was to 
+                    ensure minimal physical effort during navigation.  
+                    Menus and buttons featuring a hover effect provides visual feedback, which further enhances the user experience. Lastly, we kept the 
+                    underlines for the hyperlinks in order to make navigation clearer and enhance visibility. The icons have low visual complexity, 
+                    so their design is universal and recognizable. 
+
+                </p>
+            </section>
+            <section>
+            <h3><strong>Activity page:</strong></h3> 
+                <p> 
+                    This page was designed to have a distinct layout and color scheme compared to the other pages. We selected a nature-inspired color 
+                    palette featuring browns and greens, which complemented the hero image we envisioned. However, traditional brown and green tones 
+                    can appear washed out or blurry to individuals with colorblindness. To address this, we opted for a magenta-tinged brown that is
+                    more colorblind-friendly while preserving the natural aesthetic.
+                    To maintain consistency across the page, we implemented CSS root variables for the color palette, ensuring cohesion throughout. 
+                    Additionally, we included a sticky navigation bar to allow users to navigate the webpage effortlessly, enhancing the scrolling 
+                    experience. The "Pages" dropdown button also features a permanent hover effect to indicate the currently active page, 
+                    improving accessibility and universal design.
+                    To emphasize important information, we added shadows to the boxes and containers, helping users quickly identify where the content resides. 
+                    Images related to activities are placed above the corresponding text boxes to provide visual context before the user begins reading. 
+                    To further enhance readability, we incorporated icons where applicable, giving readers a visual preview of the content. 
+                    Finally, we selected the "Arial Sans-Serif" font for its superior readability, making the page accessible to older 
+                    users and individuals with impaired vision.
+                </p>
+            </section>
+        </article>
     </section>
 
     <!-- Footer section -->
     <footer class="accessibility-footer">
-        <div class="accessibility-footer-content">
-            <div class="accessibility-footer-links">
+        <section class="accessibility-footer-content">
+            <nav class="accessibility-footer-links">
                 <a href="#introduction"><strong>Tilbake til Toppen</strong></a>
-            </div>
+            </nav>
             <p>&copy; 2024 Group 6. All rights reserved</p>
-        </div>
+        </section>
      </footer>
-
-   
-    
-
 </body>
 </html>

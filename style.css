@@ -1,3 +1,37 @@
+/* 
+
+Table of content in this CSS:
+
+- Global resets:
+    1. general styling also font family
+
+- Activity Page styling:
+    1. Root valuables: for color consistency
+    2. Navbar styling: Sticky navbar with dropdown menu styling + logo and right menu styles + Dropdown container, button, and content
+    3. Hero section: Parallax effect with hero overlay + Text styling and photo credits.
+    4. Foreninger og Friluft Section: Section layout and background + Content box styling
+    5. Activity Section: Football, Volleyball, Sjakk, Fottur, Padletur, Sykkeltur + Image container and hover effect + Info box styling with "Read More" toggle functionality
+    6. Footer Styling: Footer layout and links
+
+- GitHub Page styling;
+    1. Root Variables: Primary, secondary, overlay, and text colors 
+    2. Navbar Styling: Sticky navbar with dropdown menu styling + Logo and right menu styles + Dropdown container, button, and content
+    3. Introduction Section (text): Introduction layout and content box styling
+    4. Git Image Section: Image container and hover effect + Photo description
+    5. Footer Styling: Footer layout and links
+
+- Accessibility Page CSS
+    1. Root Variables: for color consistency 
+    2. Navbar Styling: Sticky navbar with dropdown menu styling + Logo and right menu styles + Dropdown container, button, and content
+    3. Introduction Section: Introduction layout and content box styling
+    4. Footer Styling: Footer layout and links
+
+- Media Queries
+    1. Media queries for responsive design for smaller and larger screens.
+
+
+*/
+
 /* Global Reset */
 * {
     margin: 0;
@@ -16,6 +50,7 @@
     --activity-text-color: white;
     --activity-background-color: #ffffff;
     --activity-backdrop-color: #2f2926;
+    --activity-hover-color: #603b4d;
 }
 
 /* Navbar Styling */  
@@ -34,16 +69,17 @@
 }
 
 /* Logo */
-.activity-logo h1 {
+.activity-logo {
     color: var(--activity-primary-color);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
+    padding: 0.5vw 1vw;
 }
 
 /* Right Menu Dropdown Styling */    /* Source for dropdown menu's: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
 .activity-right-menu {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 /* The dropdown container */
@@ -54,19 +90,20 @@
 
 /* Dropdown Button */
 .activity-dropdown .activity-dropbtn {
-    font-size: 20px;
+    font-size: 1.5rem;
     border: none;
     outline: none;
     color: white;
-    padding: 14px 16px;
+    padding: 1vw 2vw;
     background-color: var(--activity-secondary-color);
-    font-family: inherit; /* Important for vertical align on mobile phones */
+    font-family: inherit; /* Important for vertical alignment on mobile phones */
     cursor: pointer;
-    margin: 0; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical alignment on mobile phones */
 }
 
 /* Dropdown content (hidden by default) */
 .activity-dropdown-content {
+    list-style: none; /* hides the bullet points */
     display: none;
     position: absolute;
     background-color:var(--activity-secondary-color);
@@ -75,9 +112,17 @@
     z-index: 1;
 }
 
+/* Permanent hover effect for Activity-Page on dropdown button to show current page */
+.activity-dropdown-content li a[href="activity.html"] {
+    background-color: var(--activity-hover-color);
+    font-weight: bold;
+}
+
+
 /* Links inside the dropdown */
 .activity-dropdown-content a {
     color: var(--activity-text-color);
+    font-size: 1.3rem;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -86,7 +131,7 @@
 
 /* Add a grey background color to dropdown links on hover */
 .activity-dropdown-content a:hover {
-    background-color: #8b8b8b;
+    background-color: var(--activity-hover-color);
 }
 
 /* Show the dropdown content when hovering over the dropdown button or focusing within the dropdown */
@@ -101,7 +146,7 @@
     background-color: var(--activity-primary-color);
 }
 
-/* Hero Section with Parallax Effect */
+/* Hero Section */
 .hero {
     position: relative;
     width: 100%;
@@ -167,7 +212,7 @@
     margin-bottom: 1rem;
 }
 
-.foreninger-content p , .friluft-content p {
+.quote { 
     font-size: 1.5rem;
     line-height: 1.6;
     color: #555;
@@ -326,8 +371,9 @@
 
 /* GIT-HUB Root Colors for Consistency */
 :root {
-    --git-primary-color: #0004ff;
-    --git-secondary-color: #333;
+    --git-primary-color: #000000;
+    --git-secondary-color: #FFD100;
+    --git-hover-color: #c5a514;
     --git-overlay-color: rgb(100, 98, 98);
     --git-text-color: white;
 }
@@ -348,9 +394,9 @@
 }
 
 /* Logo */
-.git-logo h1 {
+.git-logo {
     color: var(--git-primary-color);
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
@@ -368,12 +414,12 @@
 
 /* Dropdown Button */
 .git-dropdown .git-dropbtn {
-    font-size: 20px;
+    font-size: 1.9rem;
     border: none;
     outline: none;
-    color: white;
+    color: var(--git-primary-color);
     padding: 1vw 2vw;
-    background-color: #333;
+    background-color: var(--git-secondary-color);
     font-family: inherit; /* Important for vertical align on mobile phones */
     cursor: pointer;
     margin: 0; /* Important for vertical align on mobile phones */
@@ -381,6 +427,7 @@
 
 /* Dropdown content (hidden by default) */
 .git-dropdown-content {
+    list-style: none; /* hides the bullet points */
     display: none;
     position: absolute;
     background-color:var(--git-secondary-color);
@@ -391,16 +438,23 @@
 
 /* Links inside the dropdown */
 .git-dropdown-content a {
-    color: var(--git-text-color);
+    font-size: 1.2rem;
+    color: var(--git-primary-color);
     padding: 14px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
 }
 
+/* Permanent hover effect on github link so viewer can see what page they're currently on */
+.git-dropdown-content a[href="github.html"] {
+    background-color: var(--git-hover-color);
+    font-weight: bold;
+}
+
 /* Add a grey background color to dropdown links on hover */
 .git-dropdown-content a:hover {
-    background-color: #8b8b8b;
+    background-color: var(--git-hover-color);
 }
 
 /* Show the dropdown content when hovering over the dropdown button or focusing within the dropdown */
@@ -412,7 +466,7 @@
 /* Add a background color to the dropdown button on hover */
 .git-dropdown:hover .git-dropbtn,
 .git-dropdown:focus-within .git-dropbtn {
-    background-color: var(--git-primary-color);
+    background-color: var(--git-hover-color);
 }
 
 /* introduction Section Styling */
@@ -439,7 +493,7 @@
     text-align: center;
 }
 
-.git-introduction-content h3 {
+.git-introduction-content h2 {
     font-size: 2rem;
 }
 
@@ -458,6 +512,7 @@
     background: var(--git-text-color);
     padding: 0.5rem 1rem;
     font-size: 1.5rem;
+    text-align: center;
     border-radius: 4px;
 }
 
@@ -518,7 +573,7 @@
 }
 
 .git-footer-links a {
-    color: var(--git-text-color);
+    color: var(--git-primary-color);
     margin: 0 1rem;
     text-decoration: none;
     font-size: 1rem;
@@ -526,7 +581,7 @@
 }
 
 .git-footer-links a:hover {
-    color: var(--git-primary-color); /* Optional color change on hover */
+    color: #555; /* Optional color change on hover */
 }
 
 .git-footer p {
@@ -542,10 +597,10 @@
 
 /* Root Colors for Consistency */
 :root {
-    --accessibility-primary-color: #ff0000;
-    --accessibility-secondary-color: #333;
+    --accessibility-primary-color: #c5a514;
+    --accessibility-secondary-color: #FFD100;
     --accessibility-overlay-color: rgba(8, 7, 7, 0.6);
-    --accessibility-text-color: white;
+    --accessibility-text-color: rgb(0, 0, 0);
 }
 
 
@@ -564,15 +619,15 @@
 
 /* Logo */
 .accessibility-logo h1 {
-    color: var(--accessibility-primary-color);
-    font-size: 1.5rem;
+    color: var(--accessibility-text-color);
+    font-size: 2rem;
     font-weight: bold;
 }
 
 /* Right Menu Dropdown Styling */    /* Source for dropdown menu's: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp */
 .accessibility-right-menu {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 /* The dropdown container */
@@ -583,12 +638,12 @@
 
 /* Dropdown Button */
 .accessibility-dropdown .accessibility-dropbtn {
-    font-size: 20px;
+    font-size: 1.8rem;
     border: none;
     outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: #333;
+    color: var(--accessibility-text-color);
+    padding: 1vw 2vw;
+    background-color: var(--accessibility-secondary-color);
     font-family: inherit; /* Important for vertical align on mobile phones */
     cursor: pointer;
     margin: 0; /* Important for vertical align on mobile phones */
@@ -596,6 +651,7 @@
 
 /* Dropdown content (hidden by default) */
 .accessibility-dropdown-content {
+    list-style: none; /* hides the bullet points */
     display: none;
     position: absolute;
     background-color:var(--accessibility-secondary-color);
@@ -606,6 +662,7 @@
 
 /* Links inside the dropdown */
 .accessibility-dropdown-content a {
+    font-size: 1.3rem;
     color: var(--accessibility-text-color);
     padding: 12px 16px;
     text-decoration: none;
@@ -613,9 +670,16 @@
     text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
+/* Permanent hover effect for Accessibility-page link to indicate being on the page currently*/
+.accessibility-dropdown-content li a[href="accessibility.html"] {
+    background-color: var(--accessibility-primary-color); /* Same background as hover */
+    color: var(--accessibility-text-color); 
+    font-weight: bold; /* Emphasize the current page */
+}
+
+/* Add a darker background color to dropdown links on hover */
 .accessibility-dropdown-content a:hover {
-    background-color: #8b8b8b;
+    background-color: var(--accessibility-primary-color);
 }
 
 /* Show the dropdown content when hovering over the dropdown button or focusing within the dropdown */
@@ -628,6 +692,10 @@
 .accessibility-dropdown:hover .accessibility-dropbtn,
 .accessibility-dropdown:focus-within .accessibility-dropbtn {
     background-color: var(--accessibility-primary-color);
+}
+
+.accessibility-current {
+    color: var(--accessibility-primary-color);
 }
 
 /* introduction Section Styling */
@@ -651,11 +719,11 @@
     width: 90%; /* Ensure it's responsive */
     max-width: 850px;
     line-height: 1.8;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);      /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
-    text-align: auto; /* Ensure text is centered */
-    margin: 0 auto; /* Center content horizontally */
-    margin-top: 4rem; /* Space from the navbar */
-    margin-bottom: 4rem; /* Space at the bottom */
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);   /* box shadow for better viewing experience - source: https://www.w3schools.com/cssref/css3_pr_box-shadow.php*/
+    text-align: auto;   /* Ensure text is centered */
+    margin: 0 auto;     /* Center content horizontally */
+    margin-top: 4rem;   /* Space from the navbar */
+    margin-bottom: 4rem;    /* Space at the bottom */
 }
 
 .accessibility-introduction-content h1 {
@@ -663,20 +731,27 @@
     text-align: center;
 }
 
+.accessibility-introduction-content h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #555;
+}
+
 .accessibility-introduction-content h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
 }
 
 .accessibility-introduction-content p {
     font-size: 1.5rem;
     line-height: 1.6;
-    color: #555;
+    color: var(--accessibility-text-color);
 }
 
 /* Footer Styling */
 .accessibility-footer {
     background-color: var(--accessibility-secondary-color);
-    color: var(--accessibility-primary-color);
+    color: var(--accessibility-text-color);
     padding: 2rem;
     text-align: center;
 }
@@ -699,7 +774,7 @@
 }
 
 .accessibility-footer-links a:hover {
-    color: var(--accessibility-primary-color); /* Optional color change on hover */
+    color: #555; /*  Color change on hover */
 }
 
 .accessibility-footer p {
