@@ -303,25 +303,26 @@ Table of content in this CSS:
     color: #555;
 }
 
-.read-more-label {
+/* Read More button */  
+.read-more-label {       /* Source for the read more button: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature */
     display: inline-block;
     font-size: 1.2rem;
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     background-color: var(--activity-primary-color);
-    color: #333;
+    color: #000000;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
 /* Hide checkbox for Read More */  
-.toggle-checkbox {          /* Source for the read more button: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature */
+.toggle-checkbox-activity, .toggle-checkbox-volleyball {          
     display: none;
 }
 
-/* Football Section - Show hidden content on Check*/
-.toggle-checkbox:checked ~ .more-info {
+/*All Section - Show hidden content on Check*/
+.toggle-checkbox-activity:checked ~ .more-info {
     display: block;
 }
 /* Volleyball Section - Show hidden content on Check */
@@ -708,7 +709,7 @@ Table of content in this CSS:
 .accessibility-dropdown:focus-within .accessibility-dropbtn {
     background-color: var(--accessibility-primary-color);
 }
-
+/* Add permanent hover effect on the accessibility button in dropdown button to indicate the page viewer is on */
 .accessibility-current {
     color: var(--accessibility-primary-color);
 }
@@ -849,6 +850,423 @@ Table of content in this CSS:
     font-size: 0.9rem;
 }
 
+/* -----------------------------Styling for MatMod Page (index) ----------------------------*/
+
+*{  
+    box-sizing: border-box;  
+    margin: 0rem;  
+    padding: 0rem;  
+    font-family: Arial, Helvetica, sans-serif;  
+    }  
+  
+body {  
+      font-family: Arial, Helvetica, sans-serif;  
+      background-color: white;  
+      margin: 0rem; 
+}  
+  
+    /*Stil for navigasjonsbar Matmod*/ 
+    .nav {
+      background-color: #FFD100;
+      display: flex; 
+      justify-content: space-between;
+      align-items: center;
+      padding: 2.7rem 5%;
+      position: sticky;
+      top:0;
+      z-index: 1000;
+      height: 3rem;
+    }
+  
+    /*Logo*/ 
+    nav .logo img { 
+    max-width: 8rem;  
+    margin-bottom: 0rem; 
+    margin-left: 0rem;
+  
+  } 
+  /*lister i nav baren*/ 
+  nav ul{  
+    position: sticky;
+    list-style-type: none; 
+    margin: 0rem; 
+    padding: 0rem; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+    line-height: 1.5;
+    font-size: 1.1rem;
+  
+  } 
+  /*Innhold plassering*/ 
+  nav ul .dropdown { 
+    position: inherit;
+    margin-right: 0rem; 
+    margin-left: 1rem;
+  } 
+  
+  nav ul .dropdown .dropbtn { 
+    padding: 1rem 2rem; 
+    font-size: 1.5rem; 
+    color: black; 
+    text-decoration: none; 
+    border: none; 
+  
+  } 
+  nav ul .dropdown-content { 
+    display: none;
+    position: absolute; 
+    background-color: #FFD100; 
+    min-width: 10rem; 
+    box-shadow: 0rem 0.5rem 1rem 0rem rgba(0,0,0,0.2); 
+    padding: 0rem; 
+    margin: 0rem; 
+  } 
+  
+  nav ul .dropdown-content a { 
+    padding: 0.75rem 1rem; 
+    font-size: 1.5rem;
+    display: inline-block; 
+    color: black; 
+    text-decoration: none; 
+    margin: 0; 
+  } 
+  
+  /*Viser innholdet når man er ved knappen*/ 
+  nav ul .dropdown:hover .dropdown-content { 
+  display: block; 
+  } 
+  
+  /*legger til bakgrunnskygge for lenkene i menyen */ 
+  .dropdown-content a:hover { 
+    background-color: #b8860b; 
+  } 
+  
+  /*Hover alltid på matmod*/
+  nav ul .dropdown-content a.always-hover-matmod {
+    background-color: #b8860b; /* Samme bakgrunnsfarge som hover */
+    color: black; /* Tekstfargen */
+  }
+  
+  /*legger til bakgrunnskygge for dropdown knapp */ 
+  .nav ul li a:hover, .dropbtn:hover { 
+    background-color: darkgoldenrod; 
+    color: black; 
+  
+  } 
+  /*Datamaskin bilde*/ 
+  .hero-bilde img { 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); 
+    position: relative; 
+    background-position: top;  
+    background-repeat: no-repeat;  
+    background-size: cover;  
+    flex-wrap: wrap; 
+    object-fit: contain; 
+    width: 100%; 
+    height: 20rem; 
+    object-fit: cover; 
+    } 
+  
+    /*Overskrift over bilde*/ 
+    .hero-overskrift { 
+      font-size:2rem; 
+      color: white; 
+      text-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.7);
+      position: absolute; 
+      text-align: center;
+      top: 40%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      flex-wrap: wrap;
+      width: 100%;
+    }
+  
+    .hero-tekst { 
+      color: white; 
+      text-shadow: 0.25rem 0.25rem 0.625rem rgba(0, 0, 0, 0.7);
+      text-align: center; 
+      font-size: 1.5rem; 
+      position: absolute; 
+      top: 50%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      flex-wrap: wrap;
+      width: 100%;
+  
+    }
+    .flex-container {  
+      display: flex;  
+      flex-wrap: wrap;  
+      justify-content: space-around; /* Jevn plassering horisontalt */  
+      align-items: flex-start; /* Justerer boksene til toppen av containeren */  
+      gap: 1rem; /* Avstand mellom boksene */  
+      padding: 1rem; /* Innvendig avstand i containeren */
+      max-width: 60rem; /* Maksimal bredde for containeren */  
+      margin: 0 auto; /* Sentrerer containeren horisontalt */
+    }
+  
+    .button{   /* all button on the website should be yellow */
+      border: none;
+      color: black;
+      padding: 1rem 2rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+      margin: 0.25rem 0.124rem;
+      cursor: pointer;
+      background-color: #ffd100;
+      font-weight:bold;
+    }
+    
+    /* Grunnleggende styling for boksene */
+    .box {  
+      flex: 1 1 calc(33.33% - 1rem); /* Fleksibel bredde: 3 kolonner på større skjermer */  
+      min-width: 12rem; /* Forhindrer at boksen blir for smal */  
+      box-sizing: border-box;  
+      padding: 1rem; /* Innvendig avstand inni hver boks */  
+      background-color: #f9f9f9; /* Bakgrunnsfarge for kontrast */  
+      border-radius: 0.313rem; /* Myke hjørner */  
+      text-align: center; /* Sentrerer tekst horisontalt */  
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Legger til en svak skygge for dybde */
+      margin-bottom: 0.625rem; /* Avstand mellom boksene vertikalt */
+      padding-bottom: 0.313rem; /* Litt ekstra plass i bunnen av boksene */
+    }
+    
+    /* Spesifikke egenskaper for tekstinnholdet */
+    .box-p {  
+      font-size: 1.4rem; /* Større skriftstørrelse for overskriftene */  
+      color: #0e0e0e; /* Mørk tekstfarge for kontrast */  
+      font-weight: bold; /* Fet tekst for overskrifter */  
+      margin-bottom: 0.5rem; /* Avstand mellom overskrift og innhold */
+      margin: 0; /* Fjerner standard margen på paragrafene */  
+      line-height: 1.5; /* Gir bedre lesbarhet */
+  
+    }
+    .toggle {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+     
+    /* Skjuler input-ene som standard (checkbox) */
+    .toggle__input {
+      display: none;
+    }
+     
+    /* Styling for label (knappen) */
+    .toggle__input + label {
+      border: none;
+      color: rgb(16, 12, 12);
+      padding: 1rem 2rem;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 1rem;
+      margin: 0.250rem 0.125rem;
+      cursor: pointer;
+      background-color: #ffd100;
+      font-weight: bold;
+    }
+     
+    /* Pluss/minus-symboler før labelen */
+    .toggle__input + label:before {
+      content: "+";
+      color: #020202;
+      font-size: 1rem;
+      padding-right: 0.3rem;
+      width: 1rem;
+    }
+     
+    /* Visning av innhold ved merket checkbox */
+    .toggle__input:checked ~ .toggle__content {
+      display: block;
+    }
+     
+    /* Skjuler innhold når checkbox ikke er merket */
+    .toggle__input:not(:checked) ~ .toggle__content {
+      display: none;
+    }
+     
+    /* Endrer pluss til minus når checkbox er merket */
+    .toggle__input:checked + label:before {
+      content: "\2212"; /* Minus-tegn */
+    }
+     
+    /* Vis "less"-innhold ved aktivert checkbox (kan brukes til å vise skjulte detaljer) */
+    .toggle__input:checked + label .toggle__less {
+      display: inline;
+    }
+     
+    /* Skjuler "more"-innhold når checkboxen er aktivert */
+    .toggle__input + label .toggle__less, 
+    .toggle__input:checked + label .toggle__more {
+      display: none;
+    }
+     
+    /* Styling for innholdet som vises når toggle er aktivert */
+    .toggle__content {
+      background-color: #f9f9f9;
+      padding: 0.625rem;
+      border: 0.063rem solid #ccc;
+      margin-top: 0.313rem;
+    }
+    .spørsmål_om_utdanning {
+      margin: 1rem auto;
+      width: 60%; /* Gir en fast bredde for artikkelen */
+      text-align: center; /* Sentrerer alt innhold */
+    }
+    
+    .Spørsmål {
+      font-size: 1.5rem; /* Størrelse på overskriften */
+      font-weight: bold; /* Fet skrift */
+      color: black;
+    }
+    
+    .spørsmål_om_utdanning a {
+      font-size: 1.2rem; /* Juster lenketekstens størrelse */
+      color: #0056b3; /* Lenke farge */
+      text-decoration: none; /* Fjern understrek (valgfritt) */
+    }
+  
+    .faglig_leder{
+      text-decoration: bold;
+    }
+      .oppdatert{
+        display: flex;
+        flex-direction: row;
+      }
+  
+      .Faglig_leder{
+        font-size: 1rem;
+        font-weight: bold;
+      }
+      /*Img fagligleder*/
+      .kontaktinfo {  
+          overflow: auto; /* Helps with float layout */
+          text-align: left;
+          margin-left: 38%;
+          display: flex; /* Bruk flexbox for enklere layout */
+          align-items: flex-start; /* Juster innholdene til toppen */
+          gap: 1rem; /* Avstand mellom bilde og tekst */
+   
+    }
+      .float-image {
+        float: left;
+        margin-right: 1rem; /* Space between image and text */
+        width: 6.25rem;
+      }
+  
+    .phone-icon {
+      height: 1.50rem; 
+      width: 1.50rem;  
+  }  
+    .email-icon {
+    height: 1.50rem; 
+    width: 1.50rem;  
+  }
+  .text-content {
+      overflow: hidden; /* Ensures text wraps nicely beside image */
+    }
+  
+    .news-container {
+      margin: 1rem auto;
+      padding: 1rem;
+      max-width: 75rem;
+    }
+     
+    .asides-container {
+      display: flex;
+      flex-direction: row;
+      gap: 2rem; /* Avstand mellom kolonnene */
+    }
+    .indent {
+  line-height: 1.8;
+  
+    }
+     
+    .asides-container aside {
+      flex: 1; /* Sørger for at begge aside tar lik plass */
+      background-color: #f9f9f9; /* Lett bakgrunnsfarge for skille */
+      padding: 1rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 0 0.313rem rgba(0, 0, 0, 0.1);
+   
+    }
+    .other-courses{
+      display: flex;
+      flex-direction: column;
+      gap: 0.063rem;
+    }
+    .button {
+      padding: 1rem 1rem; /* Øker padding for bedre "touch target" */
+      font-size: 1.25rem; /* Større tekst for bedre lesbarhet */
+      text-align: center;
+      background-color: #FFD100;
+      color: black;
+      border: none;
+      border-radius: 0.5rem; /* Mer avrunding for bedre estetikk */
+      cursor: pointer;
+      text-decoration: none;
+      width: fit-content; /* Knapper tilpasser seg innholdet */
+      min-height: 3rem; /* Sikrer at høyden er minst 48px */
+      min-width: 8rem; /* Sikrer en minimumsbredde */
+      margin-top: 3rem; /* Adds space between buttons */
+      margin-bottom: 3rem;
+  
+  }
+  
+  .les-mer-button a {
+      color: black; 
+      text-decoration: none;
+      display: block; /* Gjør hele knappen klikkbar */
+      padding: 0.5rem 0; /* Ekstra padding rundt lenketeksten */
+      margin: 1rem;
+  }
+  
+  .button:hover {
+      background-color: darkgoldenrod;
+  
+  }
+  
+  
+  footer {  
+    display: flex;  
+    flex-direction: row; 
+    padding: 1rem;  
+    gap: 1.5rem; 
+    width: 100%; 
+    background-color: #FFD100;  
+    color: black;  
+    font-size: 1rem; 
+  
+  } 
+  
+  /*Linker inne i footer med linjehøyde */  
+  footer ul {  
+    list-style-type: none;   
+    padding: 0rem;  
+    margin: 4rem;  
+    margin-right: 2rem; 
+    line-height: 1.7;  
+  
+  }  
+  
+  /*avstand mellom listeelementene */ 
+   footer ul li {   
+     margin-bottom: 0.2rem; 
+  }  
+  
+  /*Arver farge og fjerner understrek på linkene*/  
+  footer ul li a {  
+    color:#0000CC;   
+  }  
+  
+  .siste_nytt {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
 
 /* MEDIA QUERIES FOR SMALL SCREENS */
 

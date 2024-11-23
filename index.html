@@ -1,199 +1,398 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="no-nn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Matematisk modellering</title>
+</head> 
 <body>
-    <!-- Top Navigation Bar -->
-    <header class="navbar">
-        <div class="logo">
-            <h1>Activity Page</h1>
-        </div>
+     <!--Navigasjonsbar med lister --> 
+  <nav class="nav">
+  <ul>
+    <li class="logo"> 
+       <a href="https://www.oslomet.no/"> 
+         <img src="../images/Logomedsignatur_OsloMet-01 (1).png" alt="logo"> </a> <!--Bildekilde: OsloMet --> 
+    </li> 
+  
+    <li class="dropdown">
+      <a href="#" class="dropbtn"><strong>Meny</strong></a> <!-- Kilde:https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp --> 
+      <ul class="dropdown-content">
+          <a href="https://www.oslomet.no/studier">Studier</a>
+          <a href="https://www.oslomet.no/forskning">Forskningen vår</a>
+          <a href="https://www.oslomet.no/om/samarbeid">Samarbeid</a>
+          <a href="https://www.oslomet.no/ub">Universitetsbiblioteket</a>
+          <a href="https://www.oslomet.no/om">Om OsloMet</a>
+          <a href="https://www.oslomet.no/om/kontakt">Kontakt</a>
+          <a href="https://www.oslomet.no/om/for-studenter">For studenter</a>
+      </ul>
+  </li>
+      <li class="dropdown"> 
+        <a href="#" class="dropbtn"><strong>Pages</strong></a> 
+        <ul class="dropdown-content"> 
+          <a href="activity.html">Activity-page</a> 
+          <a href="index.html" class="always-hover-matmod"> Matmod-page</a>
+          <a href="github.html">Github-page</a> 
+          <a href="accessibility.html">Accessibility-page</a> 
+          </ul> 
+        </li> 
+      </ul>
+  </nav> 
 
-        <div class="right-menu">
-            <!-- Dropdown Menu For "Foreninger" -->  
-            <div class="dropdown">      <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
-                <button class="dropbtn">Foreninger 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#fotball">Fotball Forening</a>
-                    <a href="#volleyball">Volleyball Forening</a>
-                    <a href="#sjakk">Sjakk Forening</a>
-                </div>
-            </div>
+  <section class="hero-bilde"> <!--Legger ved bilde under navigasjonsbar + titler. Kilde: https://www.w3schools.com/howto/howto_css_hero_image.asp --> 
+    <img src="../images/Eksamen.jpg" alt="Programmering på datamaskin"> <!--Bildekilde: Benjamin A. Ward/OsloMet --> 
+    <h1 class="hero-overskrift"><strong>Matematisk modellering og datavitenskap – ingeniør </strong></h1> 
+    <h2 class="hero-tekst"><strong> Bachelorprogram</strong></h2> 
+  </section>
 
-            <!-- Dropdown Menu For "Natur" -->
-            <div class="dropdown">       <!-- Source for dropdown buttons: https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp -->
-                <button class="dropbtn">Friluft
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#fottur">Fottur</a>
-                    <a href="#padling">Padletur</a>
-                    <a href="#sykkeltur">Sykkeltur</a>
-                </div>
-            </div>
-
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-overlay">
-            <h1>Activity Page</h1>
-            <h2> Aktiviteter for studenter i Oslo </h2>
-        </div>
-        <div class="photo-credit">FOTO: Eric Sanman</div>
-    </section>
-
-    <!-- Intro Foreninger Section -->
-    <section class="foreninger">
-        <div class="foreninger-content">
-            <h2> Foreninger </h2>
-            <p><strong> «Å delta i foreningslivet gir deg en unik sjanse til å utvide ditt sosiale nettverk, utvikle dine ferdigheter, og skape minner som varer livet ut.»</strong> - Ida Barstad Fagerland</p>    <!-- Quote from: https://www.sio.no/foreninger/ansatte-sio-foreninger -->
-        </div>
-    </section>
-
-
-    <!-- Football Section -->
-    <section class="activity-football" id="fotball">
-        <div class="football-content">
-
-        <!-- Images with Photo Credits -->
-            <div class="football-images">
-                <div class="football-image-container">
-                    <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">  <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
-                        <img src="https://images.pexels.com/photos/9468611/pexels-photo-9468611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Football Image 1">
-                    </a>
-                    <div class="photo-credit">FOTO: Omar Ramadan</div>
-                </div>
-            </div>
-
-            <!-- Information Box -->
-            <div class="info-box">
-                <h2>FIFI - Fotballforeningen ved Institutt for Informatikk</h2>
-                <p>FIFI har siden 2012 arrangert ukentlige fotballtreninger for studenter ved Institutt for informatikk. Her er alle informatikkstudenter velkomne, uavhengig av nivå og erfaring.</p>
-
-                <!-- Hidden Checkbox for Toggle -->
-                <input type="checkbox" id="toggle-more-info" class="toggle-checkbox">  <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
-                <!-- Label for the Checkbox to act as "Read More" Button -->
-                <label for="toggle-more-info" class="read-more-label">Les Mer</label>
-
-                <!-- Additional Information to Show/Hide -->
-                <div class="more-info">   <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
-                    <p>FIFI tilbyr studenter et faglig avbrekk, gjennom ukentlige fotballtreninger og andre sosiale eventer. Treningene holdes to ganger i uka, hele året. Vi spiller utendørs på Athletica Domus og innendørs på Athletica Blindern. Det er derfor nødvendig med medlemskap hos Athletica for å trene med oss.</p>
-                    <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
-                    <p><strong>Kontakt</strong></p>
-                    <p><strong>E-post:</strong> kontakt@fotballvedifi.no</p>
-                    <p><strong>Nettside:</strong> <a href="https://www.facebook.com/groups/fifivedifi/" target="_blank">Facebook siden</a></p>
-                    <p><strong>Kontaktpersoner:</strong> Loc Phuoc Tran Nguyen</p>
-                    <p><strong>Telefon:</strong> 46765601</p>
-                    <p><strong>E-post:</strong> ngloc01@gmail.com</p>
-                    <p><strong>Adresse:</strong> Ole Johan Dahls hus, Gaustadalléen 23B, 0373 Oslo</p>
-                    <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her eller på bilde under:</a></p>
-                </div>
-            </div>
-
+<!-- Generell info om studiet -->
+  <article>
+     <section class="flex-container">
+      <div class="box">
+            <p class="box-p"> Studiested</p>
+            <p>Pilestredet i Oslo</p>
+      </div>
+      <div class="box">
+            <p class="box-p"> Varighet</p>
+            <p>3 år</p>
+      </div>
+      <div class="box">
+            <p class="box-p"> Omfang</p>
+            <p>Heltid</p>
+      </div>            
+      <div class="box">
+         <p class="box-p"> Studiestart </p>
+            <p>August</p>
+      </div>
+      <div class="box">
+            <p class="box-p"> Studiepoeng </p>
+            <p>180</p>
+      </div>
+      <div class="box">
+            <p class="box-p"> Undervisningsspråk </p>
+            <p>Norsk</p>
+      </div>
+      <div class="box">
+            <p class="box-p"> Stuideplasser </p>
+            <p>40</p>
         </div>
     </section>
+  </article>
 
-    <!-- Volleyball Section -->
-    <section class="activity-volleyball" id="volleyball">
-        <div class="volleyball-content">
+<!-- In depth info about the program and important info for applicants -->
+<!--Opptakskrav og poeng-->
+<article class="toggle">
+  <input type="checkbox" value="selected" id="toggleUtveksling1" class="toggle__input">
+  <label for="toggleUtveksling1" class="toggle__label">Opptakskrav og poeng</label>
+  <div class="toggle__content">
+    <p>For å søke på dette programmet må du ha generell studiekompetanse (samordnaopptak.no) eller oppfylle kravene til realkompetanse: Matematikk R1 samt R2 og Fysikk 1</p>
+    <p>Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.</p>
+    <p>Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette studiet om du har bestått ettårig forkurs for ingeniørutdanning.</p>
+    <p>Les mer om opptakskrav og poeng på <a href="https://www.samordnaopptak.no" target="_blank">Samordna opptak</a> eller Universitet og Høgskoles nettsider.</p>
+  </div>
+</article>
+<!-- Slik søker du-->
+<article class="toggle">
+  <input type="checkbox" value="selected" id="toggleOpptakskrav1" class="toggle__input">
+  <label for="toggleOpptakskrav1" class="toggle__label"> Slik søker du</label>
+  <div class="toggle__content">
+    <p> Du søker på Søknadsweb med studiekoden for din studieretning</p>
+   
+    <h3>Du søker på samordnaopptak med studiekode 2115 503:</h3>
+    <ul>
+      <li>15. april: ordinær søknadsfrist </li>
+      <li>1. mars: frist for enkelte søkere</li>
+    </ul>
+  </div>
+</article> 
+<!--Studiets oppbygging-->
+<article class="toggle"> 
+  <input type="checkbox" value="selected" id="toggleStudietsOppbygging1" class="toggle__input">
+  <label for="toggleStudietsOppbygging1" class="toggle__label">Studiets oppbygging</label>
+  <div class="toggle__content">
+    <table cellspacing="0" cellpadding="5">
+      <thead>
+        <tr>
+          <th>År</th>
+          <th>Semester</th>
+          <th>Emne</th>
+          <th>Kode</th>
+          <th>Stp.</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!--1. studieår-->
+        <tr>
+          <td rowspan="2">1. studieår</td>
+          <td>1.semester</td>
+          <td>Diskret matematikk</td>
+          <td>DAPE1300</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>1.semester</td>
+          <td>Programmering</td>
+          <td>DAPE1400</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td rowspan="2"></td>
+          <td>1.semester</td>
+          <td>Teknologi og samfunn for programmerere</td>
+          <td>DATA1100</td>
+          <td>05</td>
+        </tr>
+        <tr>
+          <td>1.semester</td>
+          <td>Innføring i modeller og beregninger</td>
+          <td>MAMO1100</td>
+          <td>05</td>
+        </tr>
+        <tr>
+          <td rowspan="3"></td>
+          <td>2.semester</td>
+          <td>Matematikk 1000</td>
+          <td>DAFE1000</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>2.semester</td>
+          <td>Fysikk og kjemi</td>
+          <td>DAPE2101</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>2.semester</td>
+          <td>Databaser</td>
+          <td>DATA1500</td>
+          <td>10</td>
+        </tr>
+         <!-- 2. studieår-->
+        <tr>
+          <td rowspan="5">2.studieår</td>
+          <td>3.semester</td>
+          <td>Matematikk 2000 med statistikk</td>
+          <td>DAPE2000</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>3.semester</td>
+          <td>Moderne fysikk</td>
+          <td>MAMO2100</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>3.semester</td>
+          <td>Lineær algebra og introduksjon til gruppeteori</td>
+          <td>MAMO2300</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>4.semester</td>
+          <td>Matematikk 4000</td>
+          <td>DAVE3705</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>4.semester</td>
+          <td>Symmetrier og algebraiske strukturer</td>
+          <td>MAMO2500</td>
+          <td>10</td>
+        </tr>
+         <!-- 3. studieår -->
+        <tr>
+          <td rowspan="6">3. studieår</td>
+          <td>5.semester</td>
+          <td>Matematikk 3000</td>
+          <td>DAVE3700</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>5.semester</td>
+          <td>Reell analyse</td>
+          <td>MAMO3300</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>5.semester</td>
+          <td>Simulering og visualisering</td>
+          <td>MAMO3200</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>6.semester</td>
+          <td>Bacheloroppgave</td>
+          <td>DATA3900</td>
+          <td>20</td>
+        </tr>
+        <tr>
+          <td>6. semester</td>
+          <td>Testing av programvare</td>
+          <td>ADTS2310</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td>6.semester</td>
+          <td>Visualisering</td>
+          <td>ADSE3200</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</article>
+<!--Hvordan foregår undervisning-->
+<article class="toggle">
+  <input type="checkbox" value="selected" id="toggleUndervisning1" class="toggle__input">
+  <label for="toggleUndervisning1" class="toggle__label">Hvordan foregår undervisningen?</label>
+  <div class="toggle__content">
+    <p>For å gjennomføre studiet på normert tid, må du regne med å bruke om lag 40 timer per uke på studierelatert arbeid gjennom hele semesteret.</p>
+    <p>Undervisningen er en kombinasjon av:</p>
+    <ul>
+      <li>prosjektarbeid</li>
+      <li>workshop</li>
+      <li>presentasjoner</li>
+      <li>veiledninger</li>
+      <li>diskusjoner og refleksjoner</li>
+      <li>forelesninger</li>
+      <li>selvstudier</li>
+      <li>gruppearbeid</li>
+      <li>arbeidslivsrelevant bacheloroppgave</li>
+    </ul>
+  </div>
+</article>
+<!--Hva koster det?-->
+<article class="toggle">
+  <input type="checkbox" value="selected" id="toggleKostnader1" class="toggle__input">
+  <label for="toggleKostnader1" class="toggle__label">Hva koster det?</label>
+  <div class="toggle__content">
+    <p>Du betaler en semesteravgift hvert semester (<a href="https://student.oslomet.no/semesteravgift" target="_blank">student.oslomet.no</a>)</p>
+    <p>Er du internasjonal student fra utenfor EU og EØS, må du betale studieavgift (<a href="https://student.oslomet.no/studieavgift-for-internasjonale-studenter-utenfor-eu-eos" target="_blank">student.oslomet.no</a>)</p>
+    <p>Det er mulig å søke om unntak for betaling av denne studieavgiften.</p>
+  </div>
+</article>
+<!--Hva kan du jobbe som?-->
+<article class="toggle">
+  <input type="checkbox" value="selected" id="toggleJobbMuligheter1" class="toggle__input">
+  <label for="toggleJobbMuligheter1" class="toggle__label">Hva kan du jobbe som?</label>
+  <div class="toggle__content">
+    <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder.</p>
+    <p>Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du etterspurt kompetanse i arbeidslivet etter bachelorstudiet.</p>
+    <p>Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel beregninger knyttet til klima, forsikring og finans, og datadrevne metoder for verdiskaping.</p>
+    <p>Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet.</p>
+  </div>
+</article>
+ <!--Utveksling-->
+<article class="toggle">
+  <input type="checkbox" value="selected" id="toggleUtveksling2" class="toggle__input">
+  <label for="toggleUtveksling2" class="toggle__label">Utveksling</label>
+  <div class="toggle__content">
+    <p class="indent">Du kan dra på utveksling i femte semester.</p>
+  </div>
+</article>
+ <!--spørsmål om utdanning?-->
+ <article class="spørsmål_om_utdanning">
+  <p class="Spørsmål">Spørsmål om utdanningen?</p>
+  <a href="https://www.oslomet.no/kontaktskjema#Jeg%20vil%20bli%20student">
+     Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema.
+  </a>
+</article>
 
-        <!-- Images with Photo Credits -->
-            <div class="volleyball-images">
-                <div class="volleyball-image-container">
-                    <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">    <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
-                        <img src="https://images.pexels.com/photos/1263426/pexels-photo-1263426.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Volleyball Image 1">
-                    </a>
-                    <div class="photo-credit">FOTO: Jim De Ramos</div>
-                </div>
-            </div>
+<!-- Informasjon om fagliglede -->
+<section class="informasjon">
+  <div class="kontaktinfo">
+      <img src="../images/Kristoffer Herland Hellton.jpg" alt="Bilde av Faglig leder, Kristoffer Herland Hellton"
+      class="float-image">  
+      <div class="text-content">
+        <p class="Faglig_leder">Faglig leder</p>
+          <p>Kristoffer Herland Hellton</p>
+          <p>Førsteamanuensis</p>
+          <p class="contact-item">
+              <img src="../images/Telefon.jpg" alt="Telefon" class="phone-icon">
+              <a href="tel:+1234567890">+47 672 37 24 </a>
+          <p class="contact-item">              
+            <img src="../images/E-post.jpg" alt="E-post" class="email-icon">
+              <a href="mailto:kristoffer.hellton@oslomet.no">kristoffer.hellton@oslomet.no</a>
+          </p>
+      </div>
+  </div>
+</section>
+ <!--nyhetsbrev og forskningnyheter --> 
+ <article class="news-container">
+  <div class="asides-container">
+    <aside>
+       <h2>Du er kanskje også interessert i disse?</h2>
+       <ul>
+         <li class="indent">
+           <a href="https://www.oslomet.no/studier/tkd/bioteknologi-kjemiingenior">Bioteknologi- og kjemiingeniør</a>
+         </li>
+         <li class="indent">
+           <a href="https://www.oslomet.no/studier/tkd/byggingenior">Byggingeniør</a>
+         </li>
+         <li class="indent">
+           <a href="https://www.oslomet.no/studier/tkd/dataingenior">Dataingeniør</a>
+         </li>
+         <li class="indent">
+           <a href="https://www.oslomet.no/studier/tkd/informasjonsteknologi">Informasjonsteknologi</a>
+         </li>
+       </ul>
+       <a href="https://www.oslomet.no/studier/studieoversikt">&larr; Studieoversikt</a>
+    </aside>
+    <aside>
+       <h2>Student historier</h2>
+       <p>Teknologi og design</p>
+       <p>Spå fremtiden med matematikk og datavitenskap</p>
+       <p>Har du lyst til å finne ut hva som vil skje i fremtiden?</p>
+       <p>Lær å bruke verktøy for å forutsi alt fra været og strømprisene til</p>
+       <p>utviklingen i boligmarkedet.</p>
+    </aside>
+  </div>
+</article>
 
-            <!-- Info box -->
-            <div class="info-box">
-                <h2> VIFI - Volleyballforening ved Institutt for Informatikk </h2>
-                <p> VIFI er en volleyballforening for studenter på Institutt for Informatikk og ønsker å fremme et godt studentmiljø. </p>
+<article class="siste_nytt">
+  <h2>SISTE NYTT!</h2>
+  <h3>Forskningsnyheter</h3>
+  
+  <button class="button les-mer-button">
+    <a href="https://www.oslomet.no/forskning/forskningsnyheter/">Les Mer</a>
+  </button>
 
-                 <!-- Hidden Checkbox for Toggle -->
-                 <input type="checkbox" id="toggle-more-info-volleyball" class="toggle-checkbox">   <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
-                 <!-- Label for the Checkbox to act as "Read More" Button -->
-                 <!-- Label for the Checkbox to act as "Read More" Button -->
-                 <label for="toggle-more-info-volleyball" class="read-more-label">Les Mer</label>
-
-                 <!-- Additional Information to Show/Hide -->
-                <div class="more-info">         <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
-                  <p>Medlemmene i VIFI spiller volleyball sammen halvannen time i uken på SiO Athletica. Med lav terskel for å bli med og et hovedfokus på å fremme et godt sosialt miljø for alle studenter på IFI.</p>
-                  <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
-                  <p><strong>Kontakt</strong></p>
-                  <p><strong>E-post:</strong> volleyball-if@outlook.com</p>
-                  <p><strong>Nettside:</strong> <a href="https://www.facebook.com/profile.php?id=100057089814612" target="_blank">Facebook siden</a></p>
-                  <p><strong>Kontaktpersoner:</strong> Nore Skulesson Stene</p>
-                  <p><strong>Telefon:</strong> 98006669</p>
-                  <p><strong>E-post:</strong> nore.stene@outlook.com/p>
-                  <p><strong>Adresse:</strong> Gaustadalleen 23b, Postboks 1080, 0316 Oslo</p>
-                  <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her eller på bilde under:</a></p>
-                </div>
-
-            </div> 
-        </div>
-    </section>
-
-
-    <!-- Sjakk Section -->
-    <section class="activity-sjakk" id="sjakk">
-        <div class="sjakk-content">
-
-        <!-- Images with Photo Credits -->
-            <div class="sjakk-images">
-                <div class="sjakk-image-container">
-                    <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">    <!-- Source for code: https://www.geeksforgeeks.org/how-to-turn-an-image-into-a-link-in-html/ -->
-                        <img src="https://images.pexels.com/photos/6955018/pexels-photo-6955018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Sjakk Image">
-                    </a>
-                    <div class="photo-credit">FOTO: Kaboompics.com </div>
-                </div>
-            </div>
-
-            <!-- Info box -->
-            <div class="info-box">
-                <h2> IFI - Sjakkforening på Institutt for informatikk </h2>
-                <p> IFI Sjakk sitt formål er å være en interesseforening for sjakkinteresserte studenter ved Institutt for informatikk ved Universitetet i Oslo. Foreningen skal ha jevnlige arrangementer med fokus på sjakk. </p>
-
-                 <!-- Hidden Checkbox for Toggle -->
-                 <input type="checkbox" id="toggle-more-info-sjakk" class="toggle-checkbox">    <!-- Source for code: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature -->
-                 <!-- Label for the Checkbox to act as "Read More" Button -->
-                 <label for="toggle-more-info-sjakk" class="read-more-label">Les Mer</label>
-
-                 <!-- Additional Information to Show/Hide -->
-                <div class="more-info">         <!-- Info found at: https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149 -->
-                  <p><strong>Tilhørighet:</strong> Universitetet i Oslo</p>
-                  <p><strong>Kontakt</strong></p>
-                  <p><strong>E-post:</strong> oyvindb.hansen@gmail.com</p>
-                  <p><strong>Nettside:</strong> <a href="https://www.facebook.com/ifisjakk" target="_blank">Facebook siden</a></p>
-                  <p><strong>Kontaktpersoner:</strong> Eirik Strand</p>
-                  <p><strong>Telefon:</strong> 95444752</p>
-                  <p><strong>E-post:</strong> eirikst2000@gmail.com </p>
-                  <p><strong>Adresse:</strong> Gaustadalleen 23b, 0373 Oslo</p>
-                  <p><strong>Offentlig lenke til foreningen:</strong> <a href="https://www.sio.no/foreninger/finn-din-forening?i=1&s=8149" target="_blank">Trykk her eller på bilde under:</a></p>
-                </div>
-
-            </div> 
-        </div>
-    </section>
-
-             </div>
+  <h3>Hold deg oppdatert på hva som skjer på OsloMet</h3>
+  <button class="button">Abonner på vårt nyhetsbrev!</button>
 
 
-        </div>
-    </section>
+</article>
 </body>
+<!-- Footer med lister (lenker) -->
+<!--kontakt info om Oslomet-->
+<footer class="footer"> 
+  <ul class="OsloMet informasjon">
+    <li><strong>OSLO METROPOLITAN UNIVERSITY</strong></li>
+    <li><strong>STORBYUNIVERSITETET</strong></li>
+    <li class="indent">Postboks 4, St. Olavs plass, 0130 Oslo</li>
+    <li class="indent">Tlf: 67 23 50 00</li>
+    <li class="indent"><a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a></li>
+  </ul>
+ <!--Informasjonsresurser interne og eksterne brukere-->
+  <ul class="Generell informasjon">
+    <li class="indent"><a href="https://www.oslomet.no/en">English</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/alumni">Alumni</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/om/tilgjengelegheitserklering">Admin</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/om/for-ansatte">For ansatte</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/om/for-studenter">For studenter</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/om/ledige-stillinger">Ledige stillinger</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/om/pressekontakt">Pressekontakt</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/om/ansatteoversikt">Ansatteoversikt</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/om/arrangement/arrangementsoversikt">Arrangementsoversikt</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/om/tilgjengelegheitserklering">Tilgjengelegheitserklæring</a></li>
+    <li class="indent"><a href="https://www.oslomet.no/om/personvernerklering-informasjonskapslar">Personvernerklæring og informasjonskapslar</a></li>
+  </ul>
+ <!--Oslomet - Sosiale medier-->
+  <ul class="sosiale medier">
+    <li class="indent"><a href="https://x.com/oslomet">Twitter</a></li>
+    <li class="indent"><a href="https://no.linkedin.com/school/oslomet/">LinkedIn</a></li>
+    <li class="indent"><a href="https://www.facebook.com/oslomet/">Facebook</a></li>
+    <li class="indent"><a href="https://www.instagram.com/oslomet/?hl=nb">Instagram</a></li>
+  </ul>
+</footer>
+</html> 
 
-</html>
