@@ -385,7 +385,7 @@ Table of content in this CSS:
 :root {
     --git-primary-color: #000000;
     --git-secondary-color: #FFD100;
-    --git-hover-color: #c5a514;
+    --git-hover-color: #b8860b;
     --git-overlay-color: rgb(100, 98, 98);
     --git-text-color: white;
 }
@@ -613,7 +613,7 @@ Table of content in this CSS:
 
 /* Root Colors for Consistency */
 :root {
-    --accessibility-primary-color: #c5a514;
+    --accessibility-primary-color: #b8860b;
     --accessibility-secondary-color: #FFD100;
     --accessibility-overlay-color: rgba(8, 7, 7, 0.6);
     --accessibility-text-color: rgb(0, 0, 0);
