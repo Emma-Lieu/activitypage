@@ -6,16 +6,15 @@
 <title>Matematisk modellering</title>
 </head> 
 <body>
-     <!--Navigasjonsbar med lister --> 
-  <nav class="nav">
+     <!--Navbar with lists--> 
+  <nav class="matmod-nav">
   <ul>
     <li class="logo"> 
        <a href="https://www.oslomet.no/"> 
-         <img src="../images/Logomedsignatur_OsloMet-01 (1).png" alt="logo"> </a> <!--Bildekilde: OsloMet --> 
+         <img src="../images/Logomedsignatur_OsloMet-01 (1).png" alt="logo"> </a> <!--Image source: OsloMet --> 
     </li> 
-  
     <li class="dropdown">
-      <a href="#" class="dropbtn"><strong>Meny</strong></a> <!-- Kilde:https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp --> 
+      <a href="#" class="dropbtn"><strong>Meny</strong></a> <!--Code source :https://www.w3schools.com/howto/howto_css_dropdown_navbar.asp --> 
       <ul class="dropdown-content">
           <a href="https://www.oslomet.no/studier">Studier</a>
           <a href="https://www.oslomet.no/forskning">Forskningen vår</a>
@@ -27,60 +26,60 @@
       </ul>
   </li>
       <li class="dropdown"> 
-        <a href="#" class="dropbtn"><strong>Pages</strong></a> 
+        <a href="#" class="dropbtn"><strong>Sider</strong></a> 
         <ul class="dropdown-content"> 
-          <a href="activity.html">Activity-page</a> 
-          <a href="index.html" class="always-hover-matmod"> Matmod-page</a>
-          <a href="github.html">Github-page</a> 
-          <a href="accessibility.html">Accessibility-page</a> 
+          <a href="activity.html">Aktiviteter</a> 
+          <a href="index.html" class="always-hover-matmod">Matematisk modellering</a>
+           <a href="github.html">Github</a> 
+          <a href="accessibility.html">Accessibility</a> 
           </ul> 
         </li> 
       </ul>
   </nav> 
 
-  <section class="hero-bilde"> <!--Legger ved bilde under navigasjonsbar + titler. Kilde: https://www.w3schools.com/howto/howto_css_hero_image.asp --> 
-    <img src="../images/Eksamen.jpg" alt="Programmering på datamaskin"> <!--Bildekilde: Benjamin A. Ward/OsloMet --> 
-    <h1 class="hero-overskrift"><strong>Matematisk modellering og datavitenskap – ingeniør </strong></h1> 
-    <h2 class="hero-tekst"><strong> Bachelorprogram</strong></h2> 
+<!-- Image under navbar with titles -->
+  <section class="hero-bilde"> <!-- Code-source: https://www.w3schools.com/howto/howto_css_hero_image.asp --> 
+    <img src="../images/Eksamen.jpg" alt="Programmering på datamaskin"> <!--Image source: Benjamin A. Ward/OsloMet --> 
+    <h1 class="hero-overskrift"><strong>Bachelorprogram: Matematisk modellering og datavitenskap – Ingeniør </strong></h1>  
   </section>
 
-<!-- Generell info om studiet -->
+<!--Information about studies. Code-source: https://www.youtube.com/watch?v=phWxA89Dy94&t=215s--> 
   <article>
      <section class="flex-container">
       <div class="box">
             <p class="box-p"> Studiested</p>
-            <p>Pilestredet i Oslo</p>
+            <p class= "box-info">Pilestredet i Oslo</p>
       </div>
       <div class="box">
             <p class="box-p"> Varighet</p>
-            <p>3 år</p>
+            <p class= "box-info"> 3 år</p>
       </div>
       <div class="box">
             <p class="box-p"> Omfang</p>
-            <p>Heltid</p>
+            <p class= "box-info"> Heltid</p>
       </div>            
       <div class="box">
          <p class="box-p"> Studiestart </p>
-            <p>August</p>
+         <p class= "box-info"> August</p>
       </div>
       <div class="box">
             <p class="box-p"> Studiepoeng </p>
-            <p>180</p>
+            <p class= "box-info"> 180 p</p>
       </div>
       <div class="box">
             <p class="box-p"> Undervisningsspråk </p>
-            <p>Norsk</p>
+            <p class= "box-info"> Norsk og Engelsk</p>
       </div>
       <div class="box">
             <p class="box-p"> Stuideplasser </p>
-            <p>40</p>
+            <p class= "box-info">40</p>
         </div>
     </section>
   </article>
 
-<!-- In depth info about the program and important info for applicants -->
-<!--Opptakskrav og poeng-->
-<article class="toggle">
+<!-- In depth info about the program and important info for applicants. Code source: https://clearleft.com/thinking/combining-checked-and-flexbox-to-create-a-css-toggle-feature-->
+<!--Admission requirements-->
+<article class="toggle"> 
   <input type="checkbox" value="selected" id="toggleUtveksling1" class="toggle__input">
   <label for="toggleUtveksling1" class="toggle__label">Opptakskrav og poeng</label>
   <div class="toggle__content">
@@ -90,22 +89,23 @@
     <p>Les mer om opptakskrav og poeng på <a href="https://www.samordnaopptak.no" target="_blank">Samordna opptak</a> eller Universitet og Høgskoles nettsider.</p>
   </div>
 </article>
-<!-- Slik søker du-->
+
+<!--How to apply-->
 <article class="toggle">
   <input type="checkbox" value="selected" id="toggleOpptakskrav1" class="toggle__input">
   <label for="toggleOpptakskrav1" class="toggle__label"> Slik søker du</label>
   <div class="toggle__content">
     <p> Du søker på Søknadsweb med studiekoden for din studieretning</p>
-   
     <h3>Du søker på samordnaopptak med studiekode 2115 503:</h3>
     <ul>
       <li>15. april: ordinær søknadsfrist </li>
       <li>1. mars: frist for enkelte søkere</li>
     </ul>
   </div>
-</article> 
-<!--Studiets oppbygging-->
-<article class="toggle"> 
+</article>
+
+<!--Course structure-->
+<article class="toggle">
   <input type="checkbox" value="selected" id="toggleStudietsOppbygging1" class="toggle__input">
   <label for="toggleStudietsOppbygging1" class="toggle__label">Studiets oppbygging</label>
   <div class="toggle__content">
@@ -120,7 +120,7 @@
         </tr>
       </thead>
       <tbody>
-        <!--1. studieår-->
+        <!--1.year-->
         <tr>
           <td rowspan="2">1. studieår</td>
           <td>1.semester</td>
@@ -166,7 +166,7 @@
           <td>DATA1500</td>
           <td>10</td>
         </tr>
-         <!-- 2. studieår-->
+         <!-- 2.year-->
         <tr>
           <td rowspan="5">2.studieår</td>
           <td>3.semester</td>
@@ -198,7 +198,7 @@
           <td>MAMO2500</td>
           <td>10</td>
         </tr>
-         <!-- 3. studieår -->
+         <!-- 3.year -->
         <tr>
           <td rowspan="6">3. studieår</td>
           <td>5.semester</td>
@@ -240,7 +240,8 @@
     </table>
   </div>
 </article>
-<!--Hvordan foregår undervisning-->
+
+<!--How are the subjects being taught?-->
 <article class="toggle">
   <input type="checkbox" value="selected" id="toggleUndervisning1" class="toggle__input">
   <label for="toggleUndervisning1" class="toggle__label">Hvordan foregår undervisningen?</label>
@@ -260,7 +261,8 @@
     </ul>
   </div>
 </article>
-<!--Hva koster det?-->
+
+<!--Costs?-->
 <article class="toggle">
   <input type="checkbox" value="selected" id="toggleKostnader1" class="toggle__input">
   <label for="toggleKostnader1" class="toggle__label">Hva koster det?</label>
@@ -270,7 +272,8 @@
     <p>Det er mulig å søke om unntak for betaling av denne studieavgiften.</p>
   </div>
 </article>
-<!--Hva kan du jobbe som?-->
+
+<!--Job opportunities?-->
 <article class="toggle">
   <input type="checkbox" value="selected" id="toggleJobbMuligheter1" class="toggle__input">
   <label for="toggleJobbMuligheter1" class="toggle__label">Hva kan du jobbe som?</label>
@@ -281,7 +284,8 @@
     <p>Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet.</p>
   </div>
 </article>
- <!--Utveksling-->
+
+ <!--Exchange students-->
 <article class="toggle">
   <input type="checkbox" value="selected" id="toggleUtveksling2" class="toggle__input">
   <label for="toggleUtveksling2" class="toggle__label">Utveksling</label>
@@ -289,15 +293,16 @@
     <p class="indent">Du kan dra på utveksling i femte semester.</p>
   </div>
 </article>
- <!--spørsmål om utdanning?-->
+
+ <!--Questions about education?-->
  <article class="spørsmål_om_utdanning">
   <p class="Spørsmål">Spørsmål om utdanningen?</p>
   <a href="https://www.oslomet.no/kontaktskjema#Jeg%20vil%20bli%20student">
-     Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema.
+     Har du spørsmål om utdanningen, kontakt oss gjennom vårt kontaktskjema &rarr;
   </a>
 </article>
 
-<!-- Informasjon om fagliglede -->
+<!-- Information about academic leader -->
 <section class="informasjon">
   <div class="kontaktinfo">
       <img src="../images/Kristoffer Herland Hellton.jpg" alt="Bilde av Faglig leder, Kristoffer Herland Hellton"
@@ -316,15 +321,13 @@
       </div>
   </div>
 </section>
- <!--nyhetsbrev og forskningnyheter --> 
+
+<!--newsletter and research news. Code source: https://www.w3schools.com/tags/tag_aside.asp -->
  <article class="news-container">
   <div class="asides-container">
     <aside>
        <h2>Du er kanskje også interessert i disse?</h2>
        <ul>
-         <li class="indent">
-           <a href="https://www.oslomet.no/studier/tkd/bioteknologi-kjemiingenior">Bioteknologi- og kjemiingeniør</a>
-         </li>
          <li class="indent">
            <a href="https://www.oslomet.no/studier/tkd/byggingenior">Byggingeniør</a>
          </li>
@@ -335,35 +338,30 @@
            <a href="https://www.oslomet.no/studier/tkd/informasjonsteknologi">Informasjonsteknologi</a>
          </li>
        </ul>
-       <a href="https://www.oslomet.no/studier/studieoversikt">&larr; Studieoversikt</a>
+       <a href="https://www.oslomet.no/studier/studieoversikt">Studieoversikt &rarr;</a>
     </aside>
     <aside>
        <h2>Student historier</h2>
-       <p>Teknologi og design</p>
-       <p>Spå fremtiden med matematikk og datavitenskap</p>
-       <p>Har du lyst til å finne ut hva som vil skje i fremtiden?</p>
-       <p>Lær å bruke verktøy for å forutsi alt fra været og strømprisene til</p>
-       <p>utviklingen i boligmarkedet.</p>
+       <p>"Så lenge du har lyst til å jobbe med programmering, matematikk og data, kan du få jobb etter studiene. For eksempel i næringslivet, innen forskning, på skoler eller sykehus."– Sebastian Overskott</p>
+       <a href="https://www.oslomet.no/studier/studenthistorier"> Les mer om våres studenters historier</a>
     </aside>
   </div>
 </article>
 
 <article class="siste_nytt">
   <h2>SISTE NYTT!</h2>
-  <h3>Forskningsnyheter</h3>
-  
+  <p class="Forskning">Forskningsnyheter</p>
   <button class="button les-mer-button">
     <a href="https://www.oslomet.no/forskning/forskningsnyheter/">Les Mer</a>
   </button>
-
   <h3>Hold deg oppdatert på hva som skjer på OsloMet</h3>
-  <button class="button">Abonner på vårt nyhetsbrev!</button>
-
-
+  <button class="button">
+    <a href="https://www.oslomet.no/nyhetsbrev">Abonner på vårt nyhetsbrev!</a>
+  </button>
 </article>
 </body>
-<!-- Footer med lister (lenker) -->
-<!--kontakt info om Oslomet-->
+
+<!--Footer with lists and OsloMet contact information -->
 <footer class="footer"> 
   <ul class="OsloMet informasjon">
     <li><strong>OSLO METROPOLITAN UNIVERSITY</strong></li>
@@ -372,7 +370,7 @@
     <li class="indent">Tlf: 67 23 50 00</li>
     <li class="indent"><a href="https://www.oslomet.no/om/kontakt">Kontakt oss</a></li>
   </ul>
- <!--Informasjonsresurser interne og eksterne brukere-->
+ <!--General information-->
   <ul class="Generell informasjon">
     <li class="indent"><a href="https://www.oslomet.no/en">English</a></li>
     <li class="indent"><a href="https://www.oslomet.no/alumni">Alumni</a></li>
@@ -386,7 +384,7 @@
     <li class="indent"><a href="https://www.oslomet.no/om/tilgjengelegheitserklering">Tilgjengelegheitserklæring</a></li>
     <li class="indent"><a href="https://www.oslomet.no/om/personvernerklering-informasjonskapslar">Personvernerklæring og informasjonskapslar</a></li>
   </ul>
- <!--Oslomet - Sosiale medier-->
+ <!--Oslomet - Social media-->
   <ul class="sosiale medier">
     <li class="indent"><a href="https://x.com/oslomet">Twitter</a></li>
     <li class="indent"><a href="https://no.linkedin.com/school/oslomet/">LinkedIn</a></li>
